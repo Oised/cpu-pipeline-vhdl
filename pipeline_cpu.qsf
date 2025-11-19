@@ -467,3 +467,17 @@ set_location_assignment PIN_AE11 -to FL_RST_N
 set_location_assignment PIN_Y1 -to FL_RY
 set_location_assignment PIN_AC10 -to FL_WE_N
 set_location_assignment PIN_AE12 -to FL_WP_N
+set_global_assignment -name VHDL_FILE pipeline_cpu_pkg.vhd
+set_global_assignment -name VHDL_FILE mux_2_1_16b.vhd
+set_global_assignment -name VHDL_FILE mux_2_1_4b.vhd
+set_global_assignment -name VHDL_FILE pc.vhd
+set_global_assignment -name VHDL_FILE alu_16b.vhd
+set_global_assignment -name VHDL_FILE inst_mem.vhd
+set_global_assignment -name VHDL_FILE if_id.vhd
+set_global_assignment -name VHDL_FILE control.vhd
+set_global_assignment -name VHDL_FILE registers.vhd
+set_global_assignment -name VHDL_FILE id_ex.vhd
+set_global_assignment -name VHDL_FILE alu_control.vhd
+set_global_assignment -name VHDL_FILE ex_mem.vhd
+set_global_assignment -name VHDL_FILE data_memory.vhd
+set_global_assignment -name VHDL_FILE mem_wb.vhd
