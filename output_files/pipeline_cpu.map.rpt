@@ -1,5 +1,5 @@
 Analysis & Elaboration report for pipeline_cpu
-Fri Nov 14 12:59:36 2025
+Sat Nov 22 15:58:22 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -10,7 +10,11 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  5. Port Connectivity Checks: "alu_16b:ALU"
+  6. Port Connectivity Checks: "alu_16b:PC_Add"
+  7. Port Connectivity Checks: "id_ex:S_ID_EX"
+  8. Port Connectivity Checks: "alu_16b:PC_mais_2"
+  9. Analysis & Elaboration Messages
 
 
 
@@ -37,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Fri Nov 14 12:59:36 2025       ;
+; Analysis & Elaboration Status      ; Successful - Sat Nov 22 15:58:22 2025       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; pipeline_cpu                                ;
 ; Top-level Entity Name              ; pipeline_cpu                                ;
@@ -156,25 +160,168 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_16b:ALU"                                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_16b:PC_Add"                                                                         ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; control  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; zero     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "id_ex:S_ID_EX"           ;
++-------------------+-------+----------+--------------+
+; Port              ; Type  ; Severity ; Details      ;
++-------------------+-------+----------+--------------+
+; offset_in[15..13] ; Input ; Info     ; Stuck at GND ;
++-------------------+-------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_16b:PC_mais_2"                                                                      ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; b[15..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; control  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; zero     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Nov 14 12:59:30 2025
+    Info: Processing started: Sat Nov 22 15:58:16 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipeline_cpu -c pipeline_cpu --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file pipeline_cpu.vhd
-    Info (12022): Found design unit 1: pipeline_cpu-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 15
-    Info (12023): Found entity 1: pipeline_cpu File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 5
+    Info (12022): Found design unit 1: pipeline_cpu-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 18
+    Info (12023): Found entity 1: pipeline_cpu File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 8
+Info (12021): Found 1 design units, including 0 entities, in source file pipeline_cpu_pkg.vhd
+    Info (12022): Found design unit 1: pipeline_cpu_pkg File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu_pkg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux_2_1_16b.vhd
+    Info (12022): Found design unit 1: mux_2_1_16b-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd Line: 13
+    Info (12023): Found entity 1: mux_2_1_16b File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux_2_1_4b.vhd
+    Info (12022): Found design unit 1: mux_2_1_4b-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd Line: 13
+    Info (12023): Found entity 1: mux_2_1_4b File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
+    Info (12022): Found design unit 1: pc-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd Line: 13
+    Info (12023): Found entity 1: pc File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file alu_16b.vhd
+    Info (12022): Found design unit 1: alu_16b-behavior File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd Line: 16
+    Info (12023): Found entity 1: alu_16b File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file inst_mem.vhd
+    Info (12022): Found design unit 1: inst_mem-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd Line: 11
+    Info (12023): Found entity 1: inst_mem File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file if_id.vhd
+    Info (12022): Found design unit 1: if_id-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd Line: 15
+    Info (12023): Found entity 1: if_id File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file control.vhd
+    Info (12022): Found design unit 1: control-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd Line: 13
+    Info (12023): Found entity 1: control File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registers.vhd
+    Info (12022): Found design unit 1: registers-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd Line: 16
+    Info (12023): Found entity 1: registers File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file id_ex.vhd
+    Info (12022): Found design unit 1: id_ex-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 31
+    Info (12023): Found entity 1: id_ex File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file alu_control.vhd
+    Info (12022): Found design unit 1: alu_control-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_control.vhd Line: 12
+    Info (12023): Found entity 1: alu_control File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_control.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ex_mem.vhd
+    Info (12022): Found design unit 1: ex_mem-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd Line: 27
+    Info (12023): Found entity 1: ex_mem File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file data_memory.vhd
+    Info (12022): Found design unit 1: data_memory-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 14
+    Info (12023): Found entity 1: data_memory File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mem_wb.vhd
+    Info (12022): Found design unit 1: mem_wb-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd Line: 20
+    Info (12023): Found entity 1: mem_wb File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file shiftl_1.vhd
+    Info (12022): Found design unit 1: shiftl_1-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd Line: 12
+    Info (12023): Found entity 1: shiftl_1 File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd Line: 5
 Info (12127): Elaborating entity "pipeline_cpu" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at pipeline_cpu.vhd(22): object "clock" assigned a value but never read File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 22
-Warning (12158): Entity "pipeline_cpu" contains only dangling pins
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4788 megabytes
-    Info: Processing ended: Fri Nov 14 12:59:36 2025
+Warning (10036): Verilog HDL or VHDL warning at pipeline_cpu.vhd(25): object "clock" assigned a value but never read File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 25
+Warning (10541): VHDL Signal Declaration warning at pipeline_cpu.vhd(30): used implicit default value for signal "Global_In" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 30
+Warning (10541): VHDL Signal Declaration warning at pipeline_cpu.vhd(31): used implicit default value for signal "Global_Out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 31
+Warning (10036): Verilog HDL or VHDL warning at pipeline_cpu.vhd(71): object "LIXO" assigned a value but never read File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 71
+Warning (10036): Verilog HDL or VHDL warning at pipeline_cpu.vhd(80): object "overflow_EX" assigned a value but never read File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 80
+Info (12128): Elaborating entity "mux_2_1_16b" for hierarchy "mux_2_1_16b:Mux_2_1_IF" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 143
+Info (12128): Elaborating entity "pc" for hierarchy "pc:PC_IF" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 144
+Warning (10541): VHDL Signal Declaration warning at pc.vhd(9): used implicit default value for signal "PC_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd Line: 9
+Info (12128): Elaborating entity "alu_16b" for hierarchy "alu_16b:PC_mais_2" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 146
+Warning (10541): VHDL Signal Declaration warning at alu_16b.vhd(10): used implicit default value for signal "R" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd Line: 10
+Warning (10541): VHDL Signal Declaration warning at alu_16b.vhd(11): used implicit default value for signal "Zero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd Line: 11
+Warning (10541): VHDL Signal Declaration warning at alu_16b.vhd(12): used implicit default value for signal "overflow" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd Line: 12
+Info (12128): Elaborating entity "inst_mem" for hierarchy "inst_mem:Instruc_M" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 148
+Warning (10541): VHDL Signal Declaration warning at inst_mem.vhd(7): used implicit default value for signal "Inst_Out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd Line: 7
+Info (12128): Elaborating entity "if_id" for hierarchy "if_id:S_IF_ID" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 156
+Warning (10541): VHDL Signal Declaration warning at if_id.vhd(10): used implicit default value for signal "PC_2_ID_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd Line: 10
+Warning (10541): VHDL Signal Declaration warning at if_id.vhd(11): used implicit default value for signal "Inst_ID_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd Line: 11
+Info (12128): Elaborating entity "control" for hierarchy "control:S_Control" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 168
+Warning (10541): VHDL Signal Declaration warning at control.vhd(7): used implicit default value for signal "wb" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd Line: 7
+Warning (10541): VHDL Signal Declaration warning at control.vhd(8): used implicit default value for signal "m" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd Line: 8
+Warning (10541): VHDL Signal Declaration warning at control.vhd(9): used implicit default value for signal "ex" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd Line: 9
+Info (12128): Elaborating entity "registers" for hierarchy "registers:S_Registers" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 170
+Warning (10541): VHDL Signal Declaration warning at registers.vhd(11): used implicit default value for signal "RS_Data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd Line: 11
+Warning (10541): VHDL Signal Declaration warning at registers.vhd(12): used implicit default value for signal "RT_Data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd Line: 12
+Info (12128): Elaborating entity "id_ex" for hierarchy "id_ex:S_ID_EX" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 181
+Warning (10541): VHDL Signal Declaration warning at id_ex.vhd(17): used implicit default value for signal "WB_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 17
+Warning (10541): VHDL Signal Declaration warning at id_ex.vhd(18): used implicit default value for signal "M_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 18
+Warning (10541): VHDL Signal Declaration warning at id_ex.vhd(19): used implicit default value for signal "RegDst" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 19
+Warning (10541): VHDL Signal Declaration warning at id_ex.vhd(20): used implicit default value for signal "ALUOp" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 20
+Warning (10541): VHDL Signal Declaration warning at id_ex.vhd(21): used implicit default value for signal "ALUSrc" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 21
+Warning (10541): VHDL Signal Declaration warning at id_ex.vhd(22): used implicit default value for signal "PC_2_EX" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 22
+Warning (10541): VHDL Signal Declaration warning at id_ex.vhd(23): used implicit default value for signal "Src_A" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 23
+Warning (10541): VHDL Signal Declaration warning at id_ex.vhd(24): used implicit default value for signal "RT_Data_EX" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 24
+Warning (10541): VHDL Signal Declaration warning at id_ex.vhd(25): used implicit default value for signal "Offset_EX" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 25
+Warning (10541): VHDL Signal Declaration warning at id_ex.vhd(26): used implicit default value for signal "RT_EX" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 26
+Warning (10541): VHDL Signal Declaration warning at id_ex.vhd(27): used implicit default value for signal "RD_EX" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 27
+Info (12128): Elaborating entity "shiftl_1" for hierarchy "shiftl_1:S_Sll_1" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 193
+Info (12128): Elaborating entity "alu_control" for hierarchy "alu_control:ALUControl" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 197
+Warning (10541): VHDL Signal Declaration warning at alu_control.vhd(8): used implicit default value for signal "Add_Sub" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_control.vhd Line: 8
+Info (12128): Elaborating entity "mux_2_1_4b" for hierarchy "mux_2_1_4b:Mux_2_1_EX_2" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 200
+Info (12128): Elaborating entity "ex_mem" for hierarchy "ex_mem:S_EX_MEM" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 208
+Warning (10541): VHDL Signal Declaration warning at ex_mem.vhd(15): used implicit default value for signal "WB_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd Line: 15
+Warning (10541): VHDL Signal Declaration warning at ex_mem.vhd(16): used implicit default value for signal "MemWrite" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd Line: 16
+Warning (10541): VHDL Signal Declaration warning at ex_mem.vhd(17): used implicit default value for signal "MemRead" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd Line: 17
+Warning (10541): VHDL Signal Declaration warning at ex_mem.vhd(18): used implicit default value for signal "Branch" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd Line: 18
+Warning (10541): VHDL Signal Declaration warning at ex_mem.vhd(19): used implicit default value for signal "PC_MEM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd Line: 19
+Warning (10541): VHDL Signal Declaration warning at ex_mem.vhd(20): used implicit default value for signal "Zero_MEM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd Line: 20
+Warning (10541): VHDL Signal Declaration warning at ex_mem.vhd(21): used implicit default value for signal "ALU_R_MEM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd Line: 21
+Warning (10541): VHDL Signal Declaration warning at ex_mem.vhd(22): used implicit default value for signal "RT_Data_MEM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd Line: 22
+Warning (10541): VHDL Signal Declaration warning at ex_mem.vhd(23): used implicit default value for signal "RW_MEM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd Line: 23
+Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:Data_Mem" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 222
+Warning (10541): VHDL Signal Declaration warning at data_memory.vhd(10): used implicit default value for signal "Read_Data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 10
+Info (12128): Elaborating entity "mem_wb" for hierarchy "mem_wb:S_MEM_WB" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 230
+Warning (10541): VHDL Signal Declaration warning at mem_wb.vhd(12): used implicit default value for signal "RegWrite_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd Line: 12
+Warning (10541): VHDL Signal Declaration warning at mem_wb.vhd(13): used implicit default value for signal "MemtoReg_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd Line: 13
+Warning (10541): VHDL Signal Declaration warning at mem_wb.vhd(14): used implicit default value for signal "Read_Data_WB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd Line: 14
+Warning (10541): VHDL Signal Declaration warning at mem_wb.vhd(15): used implicit default value for signal "ALU_R_WB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd Line: 15
+Warning (10541): VHDL Signal Declaration warning at mem_wb.vhd(16): used implicit default value for signal "RW_WB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd Line: 16
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 45 warnings
+    Info: Peak virtual memory: 4783 megabytes
+    Info: Processing ended: Sat Nov 22 15:58:22 2025
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:13
 

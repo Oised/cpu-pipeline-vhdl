@@ -12,4 +12,12 @@ end mux_2_1_4b;
 
 architecture structure of mux_2_1_4b is
 begin
+	process(A, B, Sel)
+	begin
+	if Sel = '0' 	then
+		Y <= A;
+	else
+		Y <= B;
+	end if;
+	end process;
 end structure;

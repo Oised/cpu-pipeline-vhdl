@@ -40,7 +40,8 @@ component alu_16b
     B       : in  std_logic_vector(15 downto 0);
     Control : in  std_logic;                     -- ex: Add/Sub select (usado no seu código)
     R       : out std_logic_vector(15 downto 0);
-    Flag    : out std_logic                      -- ex: Zero flag ou similar
+    Zero    : out std_logic;
+	 overflow: out std_logic
   );
 end component;
 
@@ -115,6 +116,13 @@ component id_ex
   );
 end component;
 
+-- Shift Left
+component shiftl_1
+  port(
+	offset_EX	: in	std_logic_vector(15 downto 0); 
+	offset_EX_2	: out std_logic_vector(15 downto 0)
+  );
+end component;
 -- ALU Control
 component alu_control
   port (
