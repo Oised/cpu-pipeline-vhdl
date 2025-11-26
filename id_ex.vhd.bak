@@ -12,7 +12,6 @@ entity id_ex is
 		Offset_in : in  std_logic_vector(15 downto 0);
 		RS_addr   : in  std_logic_vector(3 downto 0);
 		RT_addr   : in  std_logic_vector(3 downto 0);
-		clock	  	 : in  std_logic;
 		Global_In : in  std_logic;
 		Global_Out: in  std_logic;
 		WB_out    : out std_logic_vector(1 downto 0);

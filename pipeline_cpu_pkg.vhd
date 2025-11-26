@@ -27,6 +27,7 @@ end component;
 component pc
   port (
     PC_in     : in  std_logic_vector(15 downto 0);
+	 clock	  : in  std_logic;
     Global_In : in  std_logic;
     Global_Out: in  std_logic;
     PC_out    : out std_logic_vector(15 downto 0)
@@ -58,6 +59,7 @@ component if_id
   port (
     PC_2_IF_in  : in  std_logic_vector(15 downto 0);
     Inst_IF_in  : in  std_logic_vector(15 downto 0);
+	 clock		 : in  std_logic;
     Global_In   : in  std_logic;
     Global_Out  : in  std_logic;
     PC_2_ID_out : out std_logic_vector(15 downto 0);
@@ -81,6 +83,7 @@ component registers
     RS_addr   : in  std_logic_vector(3 downto 0);
     RT_addr   : in  std_logic_vector(3 downto 0);
     RW_addr   : in  std_logic_vector(3 downto 0);
+	 clock	  : in  std_logic;
     WriteData : in  std_logic_vector(15 downto 0);
     RegWrite  : in  std_logic;
     RS_Data   : out std_logic_vector(15 downto 0);
@@ -100,6 +103,7 @@ component id_ex
     Offset_in : in  std_logic_vector(15 downto 0);
     RS_addr   : in  std_logic_vector(3 downto 0); -- inst_ID(12 downto 9)
     RT_addr   : in  std_logic_vector(3 downto 0); -- inst_ID(4 downto 1)
+	 clock	  : in  std_logic;
     Global_In : in  std_logic;
     Global_Out: in  std_logic;
     WB_out    : out std_logic_vector(1 downto 0);
@@ -142,6 +146,7 @@ component ex_mem
     ALU_R_in   : in  std_logic_vector(15 downto 0);
     RT_Data_in : in  std_logic_vector(15 downto 0);
     RW_in      : in  std_logic_vector(3 downto 0);
+	 clock	  	: in  std_logic;
     Global_In  : in  std_logic;
     Global_Out : in  std_logic;
     WB_out     : out std_logic_vector(1 downto 0);
@@ -174,6 +179,7 @@ component mem_wb
     Read_Data_in : in  std_logic_vector(15 downto 0);
     ALU_R_in     : in  std_logic_vector(15 downto 0);
     RW_in        : in  std_logic_vector(3 downto 0);
+	 clock	  	  : in  std_logic;
     Global_In    : in  std_logic;
     Global_Out   : in  std_logic;
     RegWrite_out : out std_logic;
@@ -183,5 +189,23 @@ component mem_wb
     RW_WB        : out std_logic_vector(3 downto 0)
   );
 end component;
-	
+
+component regis4
+	port(
+		Data  : in  std_logic_vector(3 downto 0);
+		Clock : in  std_logic;
+		Rin   : in  std_logic;
+		R     : out std_logic_vector(3 downto 0)
+	);
+end component;
+
+component regis16
+	port(
+		Data  : in  std_logic_vector(15 downto 0);
+		Clock : in  std_logic;
+		Rin   : in  std_logic;
+		R     : out std_logic_vector(15 downto 0)
+	);
+end component;
+
 end package;

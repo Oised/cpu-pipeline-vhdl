@@ -141,7 +141,7 @@ ClockDivide: PROCESS
 --- IF: FETCH DA INSTRUçãO DA MEMóRIA ---
 
 Mux_2_1_IF:	mux_2_1_16b	PORT MAP	( PC_2_IF, PC_MEM, PCSrc, PC_In );	-- Escolha do PC
-PC_IF: 		pc		 		PORT MAP	( PC_In, Global_In, Global_Out, PC_Out );
+PC_IF: 		pc		 		PORT MAP	( PC_In, clock, Global_In, Global_Out, PC_Out );
 
 PC_mais_2:	alu_16b 		PORT MAP	( PC_Out, "0000000000000010", '0', PC_2_IF, LIXO, LIXO );	-- Cáculo do prox PC
 
@@ -154,7 +154,7 @@ Instruc_M:	inst_mem		PORT MAP	( PC_Out, Inst_IF );	-- Leitura da instrução
 ------------------------------------------------------------------
 
 S_IF_ID:	if_id	PORT MAP (	PC_2_IF, Inst_IF, 	-- Entra
-									Global_In, Global_Out, 
+									clock, Global_In, Global_Out, 
 									PC_2_ID, Inst_ID);	-- Sai
 
 ------------------------------------------------------------------
@@ -167,7 +167,7 @@ S_IF_ID:	if_id	PORT MAP (	PC_2_IF, Inst_IF, 	-- Entra
 
 S_Control:		control		PORT MAP ( inst_ID, wb_ID, m_ID, ex_ID );	-- Unidade de Controle
 
-S_Registers:	registers	PORT MAP ( Inst_ID(12 DOWNTO 9), Inst_ID(8 DOWNTO 5), RW_WB, Write_Data, RegWrite, RS_Data_ID, RT_Data_ID );	-- Componente dos Registradores
+S_Registers:	registers	PORT MAP ( Inst_ID(12 DOWNTO 9), Inst_ID(8 DOWNTO 5), RW_WB, clock, Write_Data, RegWrite, RS_Data_ID, RT_Data_ID );	-- Componente dos Registradores
 
 Offset_ID(15 DOWNTO 13) <= "000";	-- Sign-extend (13b -> 16b)
 Offset_ID(12 Downto 0) 	<= Inst_ID(12 DOWNTO 0);
@@ -179,7 +179,7 @@ Offset_ID(12 Downto 0) 	<= Inst_ID(12 DOWNTO 0);
 ------------------------------------------------------------------
 
 S_ID_EX:	id_ex	PORT MAP ( 	WB_ID, M_ID, EX_ID, PC_2_ID, RS_Data_ID, RT_Data_ID, Offset_ID, inst_ID(12 DOWNTO 9), inst_ID(4 DOWNTO 1), 	-- Entra
-									Global_In, Global_Out, 
+									clock, Global_In, Global_Out, 
 									WB_EX, M_EX, RegDst, ALUOp, ALUSrc, PC_2_EX, Src_A, RT_Data_EX, Offset_EX, RT_EX, RD_EX );						-- Sai
 
 ------------------------------------------------------------------
@@ -206,8 +206,8 @@ Mux_2_1_EX_2:	mux_2_1_4b	PORT MAP ( RT_EX, RD_EX, RegDst, RW_EX );	-- Definiçã
 ------------------------------------------------------------------
 
 S_EX_MEM:	ex_mem	PORT MAP (	WB_EX, M_EX, PC_EX, Zero_EX, ALU_R_EX, RT_Data_EX, RW_EX, 										-- Entra
-										Global_In, Global_Out, 
-										WB_MEM, MemWrite, MemRead, Branch, PC_MEM, Zero_MEM, ALU_R_MEM, RT_Data_MEM, RW_MEM );	-- Sai
+											clock, Global_In, Global_Out, 
+											WB_MEM, MemWrite, MemRead, Branch, PC_MEM, Zero_MEM, ALU_R_MEM, RT_Data_MEM, RW_MEM );	-- Sai
 
 ------------------------------------------------------------------
 ------------------------------------------------------------------
@@ -228,7 +228,7 @@ Data_Mem:	data_memory	PORT MAP ( ALU_R_MEM, RT_Data_MEM, MemRead, MemWrite, Read
 ------------------------------------------------------------------ 
  
 S_MEM_WB:	mem_wb	PORT MAP ( 	WB_MEM, Read_Data_MEM, ALU_R_MEM, RW_MEM, 				-- Entra
-											Global_In, Global_Out, 
+											clock, Global_In, Global_Out, 
 											RegWrite, MemtoReg, Read_Data_WB, ALU_R_WB, RW_WB );	-- Sai
  
 --------------------------------------------------------
