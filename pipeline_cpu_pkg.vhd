@@ -101,8 +101,8 @@ component id_ex
     RS_Data   : in  std_logic_vector(15 downto 0);
     RT_Data   : in  std_logic_vector(15 downto 0);
     Offset_in : in  std_logic_vector(15 downto 0);
-    RS_addr   : in  std_logic_vector(3 downto 0); -- inst_ID(12 downto 9)
-    RT_addr   : in  std_logic_vector(3 downto 0); -- inst_ID(4 downto 1)
+    RT_ID     : in  std_logic_vector(3 downto 0); -- inst_ID(12 downto 9)
+    RD_ID     : in  std_logic_vector(3 downto 0); -- inst_ID(4 downto 1)
 	 clock	  : in  std_logic;
     Global_In : in  std_logic;
     Global_Out: in  std_logic;
@@ -205,6 +205,22 @@ component regis16
 		Clock : in  std_logic;
 		Rin   : in  std_logic;
 		R     : out std_logic_vector(15 downto 0)
+	);
+end component;
+
+component tbuf16
+	port(
+		Bin:	in		std_logic_vector(15 downto 0);
+		gate:	in		std_logic;
+		Bout:	out	std_logic_vector(15 downto 0)		
+	);
+end component;
+
+component tbuf4
+	port(
+		Bin:	in		std_logic_vector(3 downto 0);
+		gate:	in		std_logic;
+		Bout:	out	std_logic_vector(3 downto 0)		
 	);
 end component;
 

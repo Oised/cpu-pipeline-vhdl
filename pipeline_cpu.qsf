@@ -483,4 +483,6 @@ set_global_assignment -name VHDL_FILE mem_wb.vhd
 set_global_assignment -name VHDL_FILE shiftl_1.vhd
 set_global_assignment -name VHDL_FILE regis16.vhd
 set_global_assignment -name VHDL_FILE regis4.vhd
+set_global_assignment -name VHDL_FILE tbuf4.vhd
+set_global_assignment -name VHDL_FILE tbuf16.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
