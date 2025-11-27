@@ -24,9 +24,9 @@ VbBCYJcbR7oX<bOdQ6h6W=1
 !s100 >T_NH9X9Ta7_NcKe>;`S<1
 Z7 OV;C;2020.1;71
 31
-Z8 !s110 1764197441
+Z8 !s110 1764278372
 !i10b 1
-Z9 !s108 1764197441.000000
+Z9 !s108 1764278372.000000
 Z10 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd|
 Z11 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd|
 !i113 1
@@ -66,11 +66,11 @@ V^Da@m8mdPQ0=f4ID``Dn<2
 !s100 kh@3;]znX`6cHKEW_V1Lh2
 R7
 31
-Z17 !s110 1764197442
+R8
 !i10b 1
-Z18 !s108 1764197442.000000
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_control.vhd|
-Z20 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_control.vhd|
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_control.vhd|
+Z18 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_control.vhd|
 !i113 1
 R12
 R13
@@ -85,22 +85,22 @@ VA5jzC[E5RYaH<Z>U42<Xb3
 !s100 Wo7U?`:JAPd]gX6Q2RolH1
 R7
 31
-R17
+R8
 !i10b 1
+R9
+R17
 R18
-R19
-R20
 !i113 1
 R12
 R13
 Econtrol
-Z21 w1763580980
+Z19 w1763580980
 R3
 R4
 !i122 5
 R0
-Z22 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd
-Z23 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd
+Z20 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd
+Z21 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd
 l0
 L4 1
 V^Ej7G_Xb1K@6b2>_g;PBD3
@@ -110,8 +110,8 @@ R7
 R8
 !i10b 1
 R9
-Z24 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd|
-Z25 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd|
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd|
+Z23 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd|
 !i113 1
 R12
 R13
@@ -129,30 +129,30 @@ R7
 R8
 !i10b 1
 R9
-R24
-R25
+R22
+R23
 !i113 1
 R12
 R13
 Edata_memory
-Z26 w1763581168
+Z24 w1763581168
 R3
 R4
 !i122 8
 R0
-Z27 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd
-Z28 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd
+Z25 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd
+Z26 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd
 l0
 L4 1
 VNN:ZWh5VR;HzW?ckh:Eaz1
 !s100 4Ad]So?YFCIEjhYhcX5Cj2
 R7
 31
-R17
+R8
 !i10b 1
-R18
-Z29 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd|
-Z30 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd|
+R9
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd|
+Z28 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd|
 !i113 1
 R12
 R13
@@ -167,39 +167,39 @@ VlX`8cB<:?1dZ0leHY`Va32
 !s100 :3AlEeTc:R<UDN9LiD_j[2
 R7
 31
-R17
+R8
 !i10b 1
-R18
-R29
-R30
+R9
+R27
+R28
 !i113 1
 R12
 R13
 Eex_mem
-Z31 w1764196386
-Z32 DPx4 work 16 pipeline_cpu_pkg 0 22 l^O1SiPBhQ^6Z>MhUWmDz2
+Z29 w1764198482
+Z30 DPx4 work 16 pipeline_cpu_pkg 0 22 l^O1SiPBhQ^6Z>MhUWmDz2
 R3
 R4
 !i122 16
 R0
-Z33 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd
-Z34 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd
+Z31 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd
+Z32 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd
 l0
 L5 1
 V:<L[4KoeAlUnie;Z14Pd50
 !s100 Oj_j0mNRzZ9zDon8h9PWm3
 R7
 31
-Z35 !s110 1764197443
+Z33 !s110 1764278373
 !i10b 1
-Z36 !s108 1764197443.000000
-Z37 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd|
-Z38 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd|
+Z34 !s108 1764278373.000000
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd|
+Z36 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd|
 !i113 1
 R12
 R13
 Astructure
-R32
+R30
 R3
 R4
 DEx4 work 6 ex_mem 0 22 :<L[4KoeAlUnie;Z14Pd50
@@ -210,39 +210,39 @@ VGHO<A36^l=0n[j7<`98jU0
 !s100 K=ea_T7F<C@IiPV2I=I:N3
 R7
 31
-R35
+R33
 !i10b 1
+R34
+R35
 R36
-R37
-R38
 !i113 1
 R12
 R13
 Eid_ex
-Z39 w1764191688
-R32
+R29
+R30
 R3
 R4
 !i122 15
 R0
-Z40 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd
-Z41 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd
+Z37 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd
+Z38 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd
 l0
 L5 1
 V9DYB>6g_c6n7o1gQV>m:g3
 !s100 85YDOE4WZofW[a?iOZ`5L0
 R7
 31
-R35
+R33
 !i10b 1
-R36
-Z42 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd|
-Z43 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd|
+R34
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd|
+Z40 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd|
 !i113 1
 R12
 R13
 Astructure
-R32
+R30
 R3
 R4
 DEx4 work 5 id_ex 0 22 9DYB>6g_c6n7o1gQV>m:g3
@@ -253,39 +253,39 @@ V>ZiD:fIiD1`d^H=a3g3MP0
 !s100 A^_i:XkMXLAU1QEf0I1e30
 R7
 31
-R35
+R33
 !i10b 1
-R36
-R42
-R43
+R34
+R39
+R40
 !i113 1
 R12
 R13
 Eif_id
-Z44 w1764188118
-R32
+R29
+R30
 R3
 R4
 !i122 14
 R0
-Z45 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd
-Z46 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd
+Z41 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd
+Z42 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd
 l0
 L5 1
 VlX^R=>Ri0aK>VC:I0IGod2
 !s100 aGLTQc2Y=@Ho8lgUb_53Y0
 R7
 31
-R35
+R33
 !i10b 1
-R36
-Z47 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd|
-Z48 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd|
+R34
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd|
+Z44 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd|
 !i113 1
 R12
 R13
 Astructure
-R32
+R30
 R3
 R4
 DEx4 work 5 if_id 0 22 lX^R=>Ri0aK>VC:I0IGod2
@@ -296,80 +296,82 @@ V=jo7e>E68n3G=BPkKb4Ez1
 !s100 gC2=eX31]J4MKBWMIZz653
 R7
 31
-R35
+R33
 !i10b 1
-R36
-R47
-R48
+R34
+R43
+R44
 !i113 1
 R12
 R13
 Einst_mem
-Z49 w1763580924
+Z45 w1764278346
+R2
 R3
 R4
 !i122 4
 R0
-Z50 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd
-Z51 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd
+Z46 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd
+Z47 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd
 l0
-L4 1
-VJgFI?>0=O<_jhZQTSEP@]1
-!s100 m1ohJoOofJbE]z_z1WTVn2
+L5 1
+V:j:gkCQ2^6=:CVaiLoBkP1
+!s100 df:353a]dfl3RjEVC[;jo1
 R7
 31
 R8
 !i10b 1
 R9
-Z52 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd|
-Z53 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd|
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd|
+Z49 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd|
 !i113 1
 R12
 R13
 Astructure
+R2
 R3
 R4
-DEx4 work 8 inst_mem 0 22 JgFI?>0=O<_jhZQTSEP@]1
+DEx4 work 8 inst_mem 0 22 :j:gkCQ2^6=:CVaiLoBkP1
 !i122 4
-l12
-L11 3
-Vg]aJUBOh`cX_l^5K]?]kn3
-!s100 C:>Tn8Yh:DjSbUaM?<PZY0
+l33
+L12 47
+V5CEhI<o6EKVWY84G[_U7S2
+!s100 `]16mVJ]h]W0Y<``z9hQz2
 R7
 31
 R8
 !i10b 1
 R9
-R52
-R53
+R48
+R49
 !i113 1
 R12
 R13
 Emem_wb
-Z54 w1764197075
-R32
+R29
+R30
 R3
 R4
 !i122 17
 R0
-Z55 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd
-Z56 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd
+Z50 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd
+Z51 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd
 l0
 L5 1
 VD;ad]`5DK>P1ZKZGkMgKo2
 !s100 1EKW@Ob3kKiJQmQJh7e[g3
 R7
 31
-R35
+Z52 !s110 1764278374
 !i10b 1
-R36
-Z57 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd|
+R34
+Z53 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd|
 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd|
 !i113 1
 R12
 R13
 Astructure
-R32
+R30
 R3
 R4
 DEx4 work 6 mem_wb 0 22 D;ad]`5DK>P1ZKZGkMgKo2
@@ -380,33 +382,33 @@ V624X;G>LcS3MhiKl[A;;=1
 !s100 <?j[3J4<K7PbRBX?mkV8n2
 R7
 31
-R35
+R52
 !i10b 1
-R36
-R57
-Z58 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd|
+R34
+R53
+Z54 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd|
 !i113 1
 R12
 R13
 Emux_2_1_16b
-Z59 w1763838155
+Z55 w1763838155
 R3
 R4
 !i122 1
 R0
-Z60 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd
-Z61 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd
+Z56 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd
+Z57 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd
 l0
 L4 1
 VJC74A;aUaQWkBoX<dGe6;3
 !s100 8bO4aKQ5iLNEhe85KK;8N3
 R7
 31
-R8
+Z58 !s110 1764278371
 !i10b 1
-R9
-Z62 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd|
-Z63 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd|
+Z59 !s108 1764278371.000000
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd|
+Z61 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd|
 !i113 1
 R12
 R13
@@ -416,27 +418,27 @@ R4
 DEx4 work 11 mux_2_1_16b 0 22 JC74A;aUaQWkBoX<dGe6;3
 !i122 1
 l14
-Z64 L13 11
+Z62 L13 11
 V[Q0716G6O4nlnQ?:V`3_T1
 !s100 lko9og?ZQNCQmeFMF8cZZ0
 R7
 31
-R8
+R58
 !i10b 1
-R9
-R62
-R63
+R59
+R60
+R61
 !i113 1
 R12
 R13
 Emux_2_1_4b
-Z65 w1763830457
+Z63 w1763830457
 R3
 R4
 !i122 2
 R0
-Z66 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd
-Z67 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd
+Z64 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd
+Z65 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd
 l0
 L4 1
 V=_`bzHPbA>?BBd9aKo<1>0
@@ -445,9 +447,9 @@ R7
 31
 R8
 !i10b 1
-R9
-Z68 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd|
-Z69 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd|
+R59
+Z66 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd|
+Z67 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd|
 !i113 1
 R12
 R13
@@ -457,44 +459,44 @@ R4
 DEx4 work 10 mux_2_1_4b 0 22 =_`bzHPbA>?BBd9aKo<1>0
 !i122 2
 l14
-R64
+R62
 VXa7]CdAV;=>mdRWZQ:0P=3
 !s100 ^7IlXjTm=AmEHo`?LT6:L0
 R7
 31
 R8
 !i10b 1
-R9
-R68
-R69
+R59
+R66
+R67
 !i113 1
 R12
 R13
 Epc
-Z70 w1764197402
-R32
+R29
+R30
 R3
 R4
 !i122 13
 R0
-Z71 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd
-Z72 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd
+Z68 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd
+Z69 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd
 l0
 L5 1
 VCHz<5mi^Q=D[;TVi1?l]:2
 !s100 :YHAf9Z[0GlfX9DlKd=:00
 R7
 31
-R35
+R33
 !i10b 1
-R36
-Z73 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd|
-Z74 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd|
+R34
+Z70 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd|
+Z71 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd|
 !i113 1
 R12
 R13
 Astructure
-R32
+R30
 R3
 R4
 DEx4 work 2 pc 0 22 CHz<5mi^Q=D[;TVi1?l]:2
@@ -505,40 +507,40 @@ VZan@j4gPo7:B7e6cPH6cf3
 !s100 iJZOn;e1kcW]kmb1MmcW42
 R7
 31
-R35
+R33
 !i10b 1
-R36
-R73
-R74
+R34
+R70
+R71
 !i113 1
 R12
 R13
 Epipeline_cpu
-Z75 w1764174996
-R32
+Z72 w1764174996
+R30
 R2
 R3
 R4
 !i122 12
 R0
-Z76 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd
-Z77 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd
+Z73 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd
+Z74 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd
 l0
 L8 1
 V0hDA;YnE19Y=GfBATFmIA1
 !s100 A]1RTGMhKT__5N9WEo=Gg3
 R7
 31
-R17
+R33
 !i10b 1
-R18
-Z78 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd|
-Z79 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd|
+R9
+Z75 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd|
+Z76 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd|
 !i113 1
 R12
 R13
 Astructure
-R32
+R30
 R2
 R3
 R4
@@ -550,11 +552,11 @@ VSXCBdnWj;XEkYI@H>;X7L3
 !s100 7OBIH3N3L]NRn;mLL^K_T2
 R7
 31
-R35
+R33
 !i10b 1
-R18
-R78
-R79
+R9
+R75
+R76
 !i113 1
 R12
 R13
@@ -562,7 +564,7 @@ Ppipeline_cpu_pkg
 R3
 R4
 !i122 0
-w1764189754
+R29
 R0
 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu_pkg.vhd
 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu_pkg.vhd
@@ -572,33 +574,33 @@ Vl^O1SiPBhQ^6Z>MhUWmDz2
 !s100 d:?c0:dYV^l:JCRF1^l>72
 R7
 31
-R8
+R58
 !i10b 1
-!s108 1764197440.000000
+R59
 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu_pkg.vhd|
 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu_pkg.vhd|
 !i113 1
 R12
 R13
 Eregis16
-Z80 w1764174404
+Z77 w1764174404
 R3
 R4
 !i122 10
 R0
-Z81 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd
-Z82 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd
+Z78 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd
+Z79 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd
 l0
 L4 1
 VTJMlo]4YUh^IRnc;UJOC71
 !s100 AHCU@U89=0=9Rl6o9kSS41
 R7
 31
-R17
+R8
 !i10b 1
-R18
-Z83 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd|
-Z84 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd|
+R9
+Z80 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd|
+Z81 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd|
 !i113 1
 R12
 R13
@@ -608,38 +610,38 @@ R4
 DEx4 work 7 regis16 0 22 TJMlo]4YUh^IRnc;UJOC71
 !i122 10
 l14
-Z85 L13 13
+Z82 L13 13
 VK6;=bXchne[;:Z7138`]I3
 !s100 =F:9HkGeNi2K_DUQA7GG32
 R7
 31
-R17
+R8
 !i10b 1
-R18
-R83
-R84
+R9
+R80
+R81
 !i113 1
 R12
 R13
 Eregis4
-Z86 w1764174435
+Z83 w1764174435
 R3
 R4
 !i122 11
 R0
-Z87 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd
-Z88 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd
+Z84 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd
+Z85 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd
 l0
 L4 1
 V<faKk73>:?LGa8aPBYHbG2
 !s100 BPX8MQa7@JcJMX]`o2^R<3
 R7
 31
-R17
+R8
 !i10b 1
-R18
-Z89 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd|
-Z90 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd|
+R9
+Z86 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd|
+Z87 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd|
 !i113 1
 R12
 R13
@@ -649,38 +651,38 @@ R4
 DEx4 work 6 regis4 0 22 <faKk73>:?LGa8aPBYHbG2
 !i122 11
 l14
-R85
+R82
 VmeHeSDL]hW;OR6NZ89gH`2
 !s100 C6e_RD3eB3MaVS660^g4I1
 R7
 31
-R17
+R8
 !i10b 1
-R18
-R89
-R90
+R9
+R86
+R87
 !i113 1
 R12
 R13
 Eregisters
-Z91 w1764175446
+Z88 w1764175446
 R3
 R4
 !i122 6
 R0
-Z92 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd
-Z93 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd
+Z89 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd
+Z90 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd
 l0
 L4 1
 VWT<lRdM9@26B1;74af:zV1
 !s100 `7?QA=FbPPAiICz3[=oBc2
 R7
 31
-R17
+R8
 !i10b 1
 R9
-Z94 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd|
-Z95 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd|
+Z91 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd|
+Z92 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd|
 !i113 1
 R12
 R13
@@ -695,34 +697,34 @@ Vz[9V3fJo5W`8^U3_9ZoY31
 !s100 kbbgK6`Ef5ETe_GlKRk8`0
 R7
 31
-R17
+R8
 !i10b 1
 R9
-R94
-R95
+R91
+R92
 !i113 1
 R12
 R13
 Eshiftl_1
-Z96 w1763832555
+Z93 w1763832555
 R2
 R3
 R4
 !i122 9
 R0
-Z97 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd
-Z98 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd
+Z94 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd
+Z95 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd
 l0
 L5 1
 VcEX?Ba]bVdS@11@T5m57O2
 !s100 eJgLo5jf1z3UHaDKz6J:?2
 R7
 31
-R17
+R8
 !i10b 1
-R18
-Z99 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd|
-Z100 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd|
+R9
+Z96 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd|
+Z97 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd|
 !i113 1
 R12
 R13
@@ -738,11 +740,11 @@ Vim]fkRm^1nI6d`<jNozm71
 !s100 oj[_FC9;Y[]?V4Hm2iC2H0
 R7
 31
-R17
+R8
 !i10b 1
-R18
-R99
-R100
+R9
+R96
+R97
 !i113 1
 R12
 R13

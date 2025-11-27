@@ -1,5 +1,5 @@
 Analysis & Elaboration report for pipeline_cpu
-Wed Nov 26 19:50:33 2025
+Thu Nov 27 18:19:23 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Wed Nov 26 19:50:33 2025       ;
+; Analysis & Elaboration Status      ; Successful - Thu Nov 27 18:19:23 2025       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; pipeline_cpu                                ;
 ; Top-level Entity Name              ; pipeline_cpu                                ;
@@ -279,7 +279,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 26 19:50:27 2025
+    Info: Processing started: Thu Nov 27 18:19:14 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipeline_cpu -c pipeline_cpu --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -301,8 +301,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file alu_16b
     Info (12022): Found design unit 1: alu_16b-behavior File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd Line: 16
     Info (12023): Found entity 1: alu_16b File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file inst_mem.vhd
-    Info (12022): Found design unit 1: inst_mem-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd Line: 11
-    Info (12023): Found entity 1: inst_mem File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd Line: 4
+    Info (12022): Found design unit 1: inst_mem-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd Line: 12
+    Info (12023): Found entity 1: inst_mem File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file if_id.vhd
     Info (12022): Found design unit 1: if_id-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd Line: 17
     Info (12023): Found entity 1: if_id File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd Line: 5
@@ -352,7 +352,7 @@ Info (12128): Elaborating entity "pc" for hierarchy "pc:PC_IF" File: C:/quartus 
 Info (12128): Elaborating entity "regis16" for hierarchy "pc:PC_IF|regis16:R_PC_in" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd Line: 29
 Info (12128): Elaborating entity "alu_16b" for hierarchy "alu_16b:PC_mais_2" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 146
 Info (12128): Elaborating entity "inst_mem" for hierarchy "inst_mem:Instruc_M" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 148
-Warning (10541): VHDL Signal Declaration warning at inst_mem.vhd(7): used implicit default value for signal "Inst_Out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd Line: 7
+Warning (10540): VHDL Signal Declaration warning at inst_mem.vhd(14): used explicit default value for signal "instructions" because signal was never assigned a value File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd Line: 14
 Info (12128): Elaborating entity "if_id" for hierarchy "if_id:S_IF_ID" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 156
 Info (12128): Elaborating entity "control" for hierarchy "control:S_Control" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 168
 Warning (10541): VHDL Signal Declaration warning at control.vhd(7): used implicit default value for signal "wb" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd Line: 7
@@ -372,9 +372,9 @@ Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:Data_M
 Warning (10541): VHDL Signal Declaration warning at data_memory.vhd(10): used implicit default value for signal "Read_Data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 10
 Info (12128): Elaborating entity "mem_wb" for hierarchy "mem_wb:S_MEM_WB" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 230
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4777 megabytes
-    Info: Processing ended: Wed Nov 26 19:50:33 2025
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 4779 megabytes
+    Info: Processing ended: Thu Nov 27 18:19:23 2025
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:12
 
 
