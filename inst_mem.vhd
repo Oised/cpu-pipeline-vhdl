@@ -41,10 +41,10 @@ begin
   
     addr_idx := to_integer(unsigned(Address));
 
-    -- calcula address * 8 (offset em bits)
+    -- calcula address * 8
     msb_index := 511 - addr_idx * 8;
 
-    -- verifica limites (msb_index downto msb_index-15 precisa estar dentro de 511..0)
+    -- verifica limites
     if (msb_index <= 511) and (msb_index >= 15) then
       Inst_Out <= instructions(msb_index downto msb_index - 15);
 		
