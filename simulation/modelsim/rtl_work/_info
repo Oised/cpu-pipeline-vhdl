@@ -1,0 +1,752 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/simulation/modelsim
+Ealu_16b
+Z1 w1764304290
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 3
+R0
+Z5 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/alu_16b.vhd
+Z6 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/alu_16b.vhd
+l0
+L5 1
+VbBCYJcbR7oX<bOdQ6h6W=1
+!s100 >T_NH9X9Ta7_NcKe>;`S<1
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1764304743
+!i10b 1
+Z9 !s108 1764304743.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/alu_16b.vhd|
+Z11 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/alu_16b.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavior
+R2
+R3
+R4
+DEx4 work 7 alu_16b 0 22 bBCYJcbR7oX<bOdQ6h6W=1
+!i122 3
+l17
+L16 37
+VTeIjXVWnSYVIUO`U]24BZ2
+!s100 XR[4IBEAQDoO=kQ:az2eX2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ealu_control
+R1
+R3
+R4
+!i122 7
+R0
+Z14 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/alu_control.vhd
+Z15 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/alu_control.vhd
+l0
+L4 1
+V^Da@m8mdPQ0=f4ID``Dn<2
+!s100 kh@3;]znX`6cHKEW_V1Lh2
+R7
+31
+R8
+!i10b 1
+R9
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/alu_control.vhd|
+Z17 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/alu_control.vhd|
+!i113 1
+R12
+R13
+Astructure
+R3
+R4
+DEx4 work 11 alu_control 0 22 ^Da@m8mdPQ0=f4ID``Dn<2
+!i122 7
+l13
+L12 10
+VY:nObA86biFc2KG@gi5kz3
+!s100 fj][`QHdRzSKWBU?P3h491
+R7
+31
+R8
+!i10b 1
+R9
+R16
+R17
+!i113 1
+R12
+R13
+Econtrol
+Z18 w1764304456
+R3
+R4
+!i122 5
+R0
+Z19 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/control.vhd
+Z20 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/control.vhd
+l0
+L4 1
+V^Ej7G_Xb1K@6b2>_g;PBD3
+!s100 0>jGB@aWNU;kgZ6fMf4jE3
+R7
+31
+R8
+!i10b 1
+R9
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/control.vhd|
+Z22 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/control.vhd|
+!i113 1
+R12
+R13
+Astructure
+R3
+R4
+DEx4 work 7 control 0 22 ^Ej7G_Xb1K@6b2>_g;PBD3
+!i122 5
+l15
+L13 42
+V5gi7i4W_MKcW`WeAOB[5K0
+!s100 kVAPS=VPZR_P2LRO01f9Z1
+R7
+31
+R8
+!i10b 1
+R9
+R21
+R22
+!i113 1
+R12
+R13
+Edata_memory
+R1
+R2
+R3
+R4
+!i122 8
+R0
+Z23 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/data_memory.vhd
+Z24 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/data_memory.vhd
+l0
+L6 1
+Vd4AaD:D;DWWN675T^OFn`3
+!s100 PTZO^l:a`=b[WaR70lfYJ0
+R7
+31
+R8
+!i10b 1
+R9
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/data_memory.vhd|
+Z26 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/data_memory.vhd|
+!i113 1
+R12
+R13
+Astructure
+R2
+R3
+R4
+DEx4 work 11 data_memory 0 22 d4AaD:D;DWWN675T^OFn`3
+!i122 8
+l21
+L16 35
+Vl14dN=<DS<zYZ4FdkXZ`91
+!s100 hei51IO75d@o[WF5]0QKn1
+R7
+31
+R8
+!i10b 1
+R9
+R25
+R26
+!i113 1
+R12
+R13
+Eex_mem
+R1
+Z27 DPx4 work 16 pipeline_cpu_pkg 0 22 l^O1SiPBhQ^6Z>MhUWmDz2
+R3
+R4
+!i122 16
+R0
+Z28 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/ex_mem.vhd
+Z29 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/ex_mem.vhd
+l0
+L5 1
+V:<L[4KoeAlUnie;Z14Pd50
+!s100 Oj_j0mNRzZ9zDon8h9PWm3
+R7
+31
+Z30 !s110 1764304745
+!i10b 1
+Z31 !s108 1764304745.000000
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/ex_mem.vhd|
+Z33 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/ex_mem.vhd|
+!i113 1
+R12
+R13
+Astructure
+R27
+R3
+R4
+DEx4 work 6 ex_mem 0 22 :<L[4KoeAlUnie;Z14Pd50
+!i122 16
+l61
+L29 76
+VGHO<A36^l=0n[j7<`98jU0
+!s100 K=ea_T7F<C@IiPV2I=I:N3
+R7
+31
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R12
+R13
+Eid_ex
+R1
+R27
+R3
+R4
+!i122 15
+R0
+Z34 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/id_ex.vhd
+Z35 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/id_ex.vhd
+l0
+L5 1
+V9DYB>6g_c6n7o1gQV>m:g3
+!s100 85YDOE4WZofW[a?iOZ`5L0
+R7
+31
+R30
+!i10b 1
+R31
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/id_ex.vhd|
+Z37 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/id_ex.vhd|
+!i113 1
+R12
+R13
+Astructure
+R27
+R3
+R4
+DEx4 work 5 id_ex 0 22 9DYB>6g_c6n7o1gQV>m:g3
+!i122 15
+l67
+L33 87
+V>ZiD:fIiD1`d^H=a3g3MP0
+!s100 A^_i:XkMXLAU1QEf0I1e30
+R7
+31
+R30
+!i10b 1
+R31
+R36
+R37
+!i113 1
+R12
+R13
+Eif_id
+R1
+R27
+R3
+R4
+!i122 14
+R0
+Z38 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/if_id.vhd
+Z39 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/if_id.vhd
+l0
+L5 1
+VlX^R=>Ri0aK>VC:I0IGod2
+!s100 aGLTQc2Y=@Ho8lgUb_53Y0
+R7
+31
+Z40 !s110 1764304744
+!i10b 1
+Z41 !s108 1764304744.000000
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/if_id.vhd|
+Z43 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/if_id.vhd|
+!i113 1
+R12
+R13
+Astructure
+R27
+R3
+R4
+DEx4 work 5 if_id 0 22 lX^R=>Ri0aK>VC:I0IGod2
+!i122 14
+l25
+L17 19
+V=jo7e>E68n3G=BPkKb4Ez1
+!s100 gC2=eX31]J4MKBWMIZz653
+R7
+31
+R40
+!i10b 1
+R41
+R42
+R43
+!i113 1
+R12
+R13
+Einst_mem
+R1
+R2
+R3
+R4
+!i122 4
+R0
+Z44 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/inst_mem.vhd
+Z45 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/inst_mem.vhd
+l0
+L5 1
+V:j:gkCQ2^6=:CVaiLoBkP1
+!s100 df:353a]dfl3RjEVC[;jo1
+R7
+31
+R8
+!i10b 1
+R9
+Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/inst_mem.vhd|
+Z47 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/inst_mem.vhd|
+!i113 1
+R12
+R13
+Astructure
+R2
+R3
+R4
+DEx4 work 8 inst_mem 0 22 :j:gkCQ2^6=:CVaiLoBkP1
+!i122 4
+l33
+L12 47
+V5CEhI<o6EKVWY84G[_U7S2
+!s100 `]16mVJ]h]W0Y<``z9hQz2
+R7
+31
+R8
+!i10b 1
+R9
+R46
+R47
+!i113 1
+R12
+R13
+Emem_wb
+R1
+R27
+R3
+R4
+!i122 17
+R0
+Z48 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mem_wb.vhd
+Z49 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mem_wb.vhd
+l0
+L5 1
+VD;ad]`5DK>P1ZKZGkMgKo2
+!s100 1EKW@Ob3kKiJQmQJh7e[g3
+R7
+31
+R30
+!i10b 1
+R31
+Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mem_wb.vhd|
+!s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mem_wb.vhd|
+!i113 1
+R12
+R13
+Astructure
+R27
+R3
+R4
+DEx4 work 6 mem_wb 0 22 D;ad]`5DK>P1ZKZGkMgKo2
+!i122 17
+l47
+L22 51
+V624X;G>LcS3MhiKl[A;;=1
+!s100 <?j[3J4<K7PbRBX?mkV8n2
+R7
+31
+R30
+!i10b 1
+R31
+R50
+Z51 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mem_wb.vhd|
+!i113 1
+R12
+R13
+Emux_2_1_16b
+R1
+R3
+R4
+!i122 1
+R0
+Z52 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mux_2_1_16b.vhd
+Z53 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mux_2_1_16b.vhd
+l0
+L4 1
+VJC74A;aUaQWkBoX<dGe6;3
+!s100 8bO4aKQ5iLNEhe85KK;8N3
+R7
+31
+Z54 !s110 1764304742
+!i10b 1
+Z55 !s108 1764304742.000000
+Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mux_2_1_16b.vhd|
+Z57 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mux_2_1_16b.vhd|
+!i113 1
+R12
+R13
+Astructure
+R3
+R4
+DEx4 work 11 mux_2_1_16b 0 22 JC74A;aUaQWkBoX<dGe6;3
+!i122 1
+l14
+Z58 L13 11
+V[Q0716G6O4nlnQ?:V`3_T1
+!s100 lko9og?ZQNCQmeFMF8cZZ0
+R7
+31
+R54
+!i10b 1
+R55
+R56
+R57
+!i113 1
+R12
+R13
+Emux_2_1_4b
+R1
+R3
+R4
+!i122 2
+R0
+Z59 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mux_2_1_4b.vhd
+Z60 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mux_2_1_4b.vhd
+l0
+L4 1
+V=_`bzHPbA>?BBd9aKo<1>0
+!s100 =7eoU>H079aUD0[`zg_eX2
+R7
+31
+R8
+!i10b 1
+R55
+Z61 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mux_2_1_4b.vhd|
+Z62 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mux_2_1_4b.vhd|
+!i113 1
+R12
+R13
+Astructure
+R3
+R4
+DEx4 work 10 mux_2_1_4b 0 22 =_`bzHPbA>?BBd9aKo<1>0
+!i122 2
+l14
+R58
+VXa7]CdAV;=>mdRWZQ:0P=3
+!s100 ^7IlXjTm=AmEHo`?LT6:L0
+R7
+31
+R8
+!i10b 1
+R55
+R61
+R62
+!i113 1
+R12
+R13
+Epc
+R1
+R27
+R3
+R4
+!i122 13
+R0
+Z63 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pc.vhd
+Z64 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pc.vhd
+l0
+L5 1
+VCHz<5mi^Q=D[;TVi1?l]:2
+!s100 :YHAf9Z[0GlfX9DlKd=:00
+R7
+31
+R40
+!i10b 1
+R41
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pc.vhd|
+Z66 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pc.vhd|
+!i113 1
+R12
+R13
+Astructure
+R27
+R3
+R4
+DEx4 work 2 pc 0 22 CHz<5mi^Q=D[;TVi1?l]:2
+!i122 13
+l27
+L15 19
+VZan@j4gPo7:B7e6cPH6cf3
+!s100 iJZOn;e1kcW]kmb1MmcW42
+R7
+31
+R40
+!i10b 1
+R41
+R65
+R66
+!i113 1
+R12
+R13
+Epipeline_cpu
+R1
+R27
+R2
+R3
+R4
+!i122 12
+R0
+Z67 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pipeline_cpu.vhd
+Z68 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pipeline_cpu.vhd
+l0
+L8 1
+V0hDA;YnE19Y=GfBATFmIA1
+!s100 A]1RTGMhKT__5N9WEo=Gg3
+R7
+31
+R40
+!i10b 1
+R41
+Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pipeline_cpu.vhd|
+Z70 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pipeline_cpu.vhd|
+!i113 1
+R12
+R13
+Astructure
+R27
+R2
+R3
+R4
+DEx4 work 12 pipeline_cpu 0 22 0hDA;YnE19Y=GfBATFmIA1
+!i122 12
+l119
+L18 230
+VSXCBdnWj;XEkYI@H>;X7L3
+!s100 7OBIH3N3L]NRn;mLL^K_T2
+R7
+31
+R40
+!i10b 1
+R41
+R69
+R70
+!i113 1
+R12
+R13
+Ppipeline_cpu_pkg
+R3
+R4
+!i122 0
+Z71 w1764304291
+R0
+8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pipeline_cpu_pkg.vhd
+FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pipeline_cpu_pkg.vhd
+l0
+L4 1
+Vl^O1SiPBhQ^6Z>MhUWmDz2
+!s100 d:?c0:dYV^l:JCRF1^l>72
+R7
+31
+R54
+!i10b 1
+R55
+!s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pipeline_cpu_pkg.vhd|
+!s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pipeline_cpu_pkg.vhd|
+!i113 1
+R12
+R13
+Eregis16
+R71
+R3
+R4
+!i122 10
+R0
+Z72 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/regis16.vhd
+Z73 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/regis16.vhd
+l0
+L4 1
+VTJMlo]4YUh^IRnc;UJOC71
+!s100 AHCU@U89=0=9Rl6o9kSS41
+R7
+31
+R40
+!i10b 1
+R41
+Z74 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/regis16.vhd|
+Z75 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/regis16.vhd|
+!i113 1
+R12
+R13
+Astructure
+R3
+R4
+DEx4 work 7 regis16 0 22 TJMlo]4YUh^IRnc;UJOC71
+!i122 10
+l14
+Z76 L13 13
+VK6;=bXchne[;:Z7138`]I3
+!s100 =F:9HkGeNi2K_DUQA7GG32
+R7
+31
+R40
+!i10b 1
+R41
+R74
+R75
+!i113 1
+R12
+R13
+Eregis4
+R71
+R3
+R4
+!i122 11
+R0
+Z77 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/regis4.vhd
+Z78 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/regis4.vhd
+l0
+L4 1
+V<faKk73>:?LGa8aPBYHbG2
+!s100 BPX8MQa7@JcJMX]`o2^R<3
+R7
+31
+R40
+!i10b 1
+R41
+Z79 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/regis4.vhd|
+Z80 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/regis4.vhd|
+!i113 1
+R12
+R13
+Astructure
+R3
+R4
+DEx4 work 6 regis4 0 22 <faKk73>:?LGa8aPBYHbG2
+!i122 11
+l14
+R76
+VmeHeSDL]hW;OR6NZ89gH`2
+!s100 C6e_RD3eB3MaVS660^g4I1
+R7
+31
+R40
+!i10b 1
+R41
+R79
+R80
+!i113 1
+R12
+R13
+Eregisters
+R71
+R3
+R4
+!i122 6
+R0
+Z81 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/registers.vhd
+Z82 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/registers.vhd
+l0
+L4 1
+VWT<lRdM9@26B1;74af:zV1
+!s100 `7?QA=FbPPAiICz3[=oBc2
+R7
+31
+R8
+!i10b 1
+R9
+Z83 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/registers.vhd|
+Z84 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/registers.vhd|
+!i113 1
+R12
+R13
+Astructure
+R3
+R4
+DEx4 work 9 registers 0 22 WT<lRdM9@26B1;74af:zV1
+!i122 6
+l18
+L17 3
+Vz[9V3fJo5W`8^U3_9ZoY31
+!s100 kbbgK6`Ef5ETe_GlKRk8`0
+R7
+31
+R8
+!i10b 1
+R9
+R83
+R84
+!i113 1
+R12
+R13
+Eshiftl_1
+R71
+R2
+R3
+R4
+!i122 9
+R0
+Z85 8C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/shiftl_1.vhd
+Z86 FC:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/shiftl_1.vhd
+l0
+L5 1
+VcEX?Ba]bVdS@11@T5m57O2
+!s100 eJgLo5jf1z3UHaDKz6J:?2
+R7
+31
+R40
+!i10b 1
+R41
+Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/shiftl_1.vhd|
+Z88 !s107 C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/shiftl_1.vhd|
+!i113 1
+R12
+R13
+Astructure
+R2
+R3
+R4
+DEx4 work 8 shiftl_1 0 22 cEX?Ba]bVdS@11@T5m57O2
+!i122 9
+l13
+L12 7
+Vim]fkRm^1nI6d`<jNozm71
+!s100 oj[_FC9;Y[]?V4Hm2iC2H0
+R7
+31
+R40
+!i10b 1
+R41
+R87
+R88
+!i113 1
+R12
+R13

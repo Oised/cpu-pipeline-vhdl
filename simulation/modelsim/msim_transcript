@@ -1,0 +1,285 @@
+# Reading pref.tcl
+# do pipeline_cpu_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pipeline_cpu_pkg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:02 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pipeline_cpu_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package pipeline_cpu_pkg
+# End time: 01:39:02 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mux_2_1_16b.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:02 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mux_2_1_16b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2_1_16b
+# -- Compiling architecture structure of mux_2_1_16b
+# End time: 01:39:02 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mux_2_1_4b.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:02 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mux_2_1_4b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2_1_4b
+# -- Compiling architecture structure of mux_2_1_4b
+# End time: 01:39:03 on Nov 28,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/alu_16b.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:03 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/alu_16b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu_16b
+# -- Compiling architecture behavior of alu_16b
+# End time: 01:39:03 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/inst_mem.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:03 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/inst_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity inst_mem
+# -- Compiling architecture structure of inst_mem
+# End time: 01:39:03 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:03 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity control
+# -- Compiling architecture structure of control
+# End time: 01:39:03 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/registers.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:03 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/registers.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity registers
+# -- Compiling architecture structure of registers
+# End time: 01:39:03 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/alu_control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:03 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/alu_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_control
+# -- Compiling architecture structure of alu_control
+# End time: 01:39:03 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/data_memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:03 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory
+# -- Compiling architecture structure of data_memory
+# End time: 01:39:04 on Nov 28,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/shiftl_1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:04 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/shiftl_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftl_1
+# -- Compiling architecture structure of shiftl_1
+# End time: 01:39:04 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/regis16.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:04 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/regis16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regis16
+# -- Compiling architecture structure of regis16
+# End time: 01:39:04 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/regis4.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:04 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/regis4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regis4
+# -- Compiling architecture structure of regis4
+# End time: 01:39:04 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pipeline_cpu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:04 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pipeline_cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package pipeline_cpu_pkg
+# -- Compiling entity pipeline_cpu
+# -- Compiling architecture structure of pipeline_cpu
+# End time: 01:39:04 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pc.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:04 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package pipeline_cpu_pkg
+# -- Compiling entity pc
+# -- Compiling architecture structure of pc
+# End time: 01:39:04 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/if_id.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:04 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/if_id.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package pipeline_cpu_pkg
+# -- Compiling entity if_id
+# -- Compiling architecture structure of if_id
+# End time: 01:39:04 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/id_ex.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:05 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/id_ex.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package pipeline_cpu_pkg
+# -- Compiling entity id_ex
+# -- Compiling architecture structure of id_ex
+# End time: 01:39:05 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/ex_mem.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:05 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/ex_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package pipeline_cpu_pkg
+# -- Compiling entity ex_mem
+# -- Compiling architecture structure of ex_mem
+# End time: 01:39:05 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mem_wb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:39:05 on Nov 28,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/otaug/Downloads/cpu-pipeline-vhdl-dev-pedro (2)/cpu-pipeline-vhdl-dev-pedro/cpu-pipeline-vhdl-dev-pedro/mem_wb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package pipeline_cpu_pkg
+# -- Compiling entity mem_wb
+# -- Compiling architecture structure of mem_wb
+# End time: 01:39:05 on Nov 28,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.alu_control
+# vsim work.alu_control 
+# Start time: 01:39:18 on Nov 28,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.alu_control(structure)
+wave create -driver freeze -pattern random -initialvalue U -period 50ps -random_type Uniform -seed 5 -starttime 0ps -endtime 1000ps sim:/alu_control/ALUOp
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+wave create -driver freeze -pattern random -initialvalue U -period 50ps -random_type Uniform -seed 5 -starttime 0ps -endtime 1000ps sim:/alu_control/ALUOp
+wave create -driver freeze -pattern random -initialvalue 0 -period 50ps -random_type Exponential -seed 5 -starttime 0ps -endtime 1000ps sim:/alu_control/ALUOp
+wave create -driver freeze -pattern random -initialvalue 0 -period 50ps -random_type Poisson -seed 5 -starttime 0ps -endtime 1000ps sim:/alu_control/Funct_lsb
+add wave -position end  sim:/alu_control/Add_Sub
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: pedro  Hostname: PD-NOTE  ProcessID: 16692
+#           Attempting to use alternate WLF file "./wlftb569jj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftb569jj
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+vsim work.control
+# End time: 01:42:27 on Nov 28,2025, Elapsed time: 0:03:09
+# Errors: 0, Warnings: 0
+# vsim work.control 
+# Start time: 01:42:27 on Nov 28,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.control(structure)
+wave create -pattern random -initialvalue 000 -period 50ps -random_type Poisson -seed 5 -range 2 0 -starttime 0ps -endtime 1000ps sim:/control/opcode
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# alu_control
+wave create -driver freeze -pattern random -initialvalue UUUUUUUUUUUUUUUU -period 50ps -random_type Poisson -seed 5 -range 15 0 -starttime 0ps -endtime 1000ps sim:/control/instruction
+# alu_control
+add wave -position end  sim:/control/opcode
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: pedro  Hostname: PD-NOTE  ProcessID: 16692
+#           Attempting to use alternate WLF file "./wlftegddz7".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftegddz7
+add wave -position end  sim:/control/ex
+add wave -position end  sim:/control/m
+add wave -position end  sim:/control/wb
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+restart
+run
+restart
+run
+restart
+wave modify -driver freeze -pattern random -initialvalue UUUUUUUUUUUUUUUU -period 50ps -random_type Uniform -seed 5 -range 15 0 -starttime 0ps -endtime 1000ps Edit:/control/instruction
+# alu_control
+restart
+run
+restart
+wave modify -driver freeze -pattern random -initialvalue UUUUUUUUUUUUUUUU -period 50ps -random_type Normal -seed 5 -range 15 0 -starttime 0ps -endtime 1000ps Edit:/control/instruction
+# alu_control
+restart
+run
+# End time: 01:47:55 on Nov 28,2025, Elapsed time: 0:05:28
+# Errors: 0, Warnings: 0
