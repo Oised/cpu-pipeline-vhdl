@@ -17,6 +17,7 @@ vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-
 vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd}
 vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd}
 vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd}
+vcom -93 -work work {C:/quartus directory/proj1_cpu_s2_25/multplex_led_hex.vhd}
 vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd}
 vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd}
 vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd}

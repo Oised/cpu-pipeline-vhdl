@@ -11,5 +11,44 @@ entity control is
 end control;
 
 architecture structure of control is
+    signal opcode : std_logic_vector(2 downto 0);
 begin
+    -- Extrai o opcode (bits mais significativos)
+    opcode <= instruction(15 downto 13);
+    
+    process(opcode)
+    begin
+        case opcode is
+            -- Tipo R (000): add/sub
+            when "000" =>
+                wb <= "10";  -- RegWrite=1, MemtoReg=0
+                m  <= "000"; -- Branch=0, MemRead=0, MemWrite=0
+                ex <= "110"; -- RegDst=1, ALUOp=1, ALUSrc=0
+                
+            -- lw (001)
+            when "001" =>
+                wb <= "11";  -- RegWrite=1, MemtoReg=1
+                m  <= "010"; -- Branch=0, MemRead=1, MemWrite=0
+                ex <= "001"; -- RegDst=0, ALUOp=0, ALUSrc=1
+                
+            -- sw (010)
+            when "010" =>
+                wb <= "00";  -- RegWrite=0, MemtoReg=0 (don't care)
+                m  <= "001"; -- Branch=0, MemRead=0, MemWrite=1
+                ex <= "001"; -- RegDst=0 (don't care), ALUOp=0, ALUSrc=1
+                
+            -- beq (011)
+            when "011" =>
+                wb <= "00";  -- RegWrite=0, MemtoReg=0 (don't care)
+                m  <= "100"; -- Branch=1, MemRead=0, MemWrite=0
+                ex <= "010"; -- RegDst=0 (don't care), ALUOp=1, ALUSrc=0
+                
+            -- Outras instruções (NOP ou não implementadas)
+            when others =>
+                wb <= "00";
+                m  <= "000";
+                ex <= "000";
+        end case;
+    end process;
+    
 end structure;

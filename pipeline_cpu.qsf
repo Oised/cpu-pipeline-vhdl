@@ -485,4 +485,5 @@ set_global_assignment -name VHDL_FILE regis16.vhd
 set_global_assignment -name VHDL_FILE regis4.vhd
 set_global_assignment -name VHDL_FILE tbuf4.vhd
 set_global_assignment -name VHDL_FILE tbuf16.vhd
+set_global_assignment -name VHDL_FILE ../../../../proj1_cpu_s2_25/multplex_led_hex.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

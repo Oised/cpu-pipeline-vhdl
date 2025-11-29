@@ -9,17 +9,22 @@ ENTITY pipeline_cpu IS
 
 	PORT(
 
-		CLOCK_50:	IN	STD_LOGIC
-		
+		CLOCK_50:	IN	STD_LOGIC;
+		sw:			IN	STD_LOGIC_VECTOR(3 DOWNTO 0);
+		hex0, hex2, hex3, hex4, hex5:	OUT STD_LOGIC_VECTOR(0 TO 6)
+
 );
 
 END ENTITY pipeline_cpu;
 
 ARCHITECTURE structure OF pipeline_cpu IS
 
+SIGNAL view_regis: 		STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL view_regis_data: STD_LOGIC_VECTOR(15 DOWNTO 0);
+
 ----- Clock -----
 
-CONSTANT max: INTEGER := 50000000;			-- Ciclo do clock (é ajustável)
+CONSTANT max: INTEGER := 10;					-- Ciclo do clock (é ajustável)
 CONSTANT half: INTEGER := max/2;				-- Meio Ciclo
 SIGNAL clockticks: INTEGER RANGE 0 TO max;-- Conta cada ciclo do clock de entrada
 SIGNAL clock: STD_LOGIC;
@@ -27,96 +32,106 @@ SIGNAL clock: STD_LOGIC;
 
 ----- Sinais de Sincronização -----
 
-SIGNAL Global_In:		STD_LOGIC;
-SIGNAL Global_Out:	STD_LOGIC;
+-- Parâmetros
+CONSTANT N        : INTEGER := 1;		-- <-- ajuste aqui (por ex. 100)
+CONSTANT MAX_PHASE: INTEGER := 4 * N;
+
+-- Contador de fase
+SIGNAL phase_cnt  : INTEGER RANGE 0 TO MAX_PHASE-1 := 0;
+
+-- Sinais globais (garanto inicialização)
+SIGNAL Global_In  : STD_LOGIC := '0';
+SIGNAL Global_Out : STD_LOGIC := '0';
 
 
 ----- IF -----
 
-SIGNAL PC_In:		STD_LOGIC_VECTOR (15 DOWNTO 0);	-- Cálculo de PC
-SIGNAL PC_Out:		STD_LOGIC_VECTOR (15 DOWNTO 0);	
-SIGNAL PC_2_IF:	STD_LOGIC_VECTOR (15 DOWNTO 0);
+SIGNAL PC_In:		STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');	-- Cálculo de PC
+SIGNAL PC_Out:		STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');	
+SIGNAL PC_2_IF:	STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');
 
-SIGNAL Inst_IF:	STD_LOGIC_VECTOR (15 DOWNTO 0);	-- Instrução ("_IF, _ID, _EX e _WB" sinaliza aqui e ao 
-																	-- longo do programa a qual estado esse sinal pertence)
+SIGNAL Inst_IF:	STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');	-- Instrução ("_IF, _ID, _EX e _WB" sinaliza aqui e ao 
+																							-- longo do programa a qual estado esse sinal pertence)
 
 ----- ID -----
 
-SIGNAL PC_2_ID:	STD_LOGIC_VECTOR (15 DOWNTO 0);	-- Sinais que chegam do estado anterior
-SIGNAL Inst_ID:	STD_LOGIC_VECTOR (15 DOWNTO 0);
+SIGNAL PC_2_ID:	STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');	-- Sinais que chegam do estado anterior
+SIGNAL Inst_ID:	STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');
 
-SIGNAL WB_ID:	STD_LOGIC_VECTOR (1 DOWNTO 0);	-- Sinais de Controle
-SIGNAL M_ID:	STD_LOGIC_VECTOR (2 DOWNTO 0);
-SIGNAL EX_ID:	STD_LOGIC_VECTOR (2 DOWNTO 0);
+SIGNAL WB_ID:	STD_LOGIC_VECTOR (1 DOWNTO 0) := (OTHERS => '0');	-- Sinais de Controle
+SIGNAL M_ID:	STD_LOGIC_VECTOR (2 DOWNTO 0) := (OTHERS => '0');
+SIGNAL EX_ID:	STD_LOGIC_VECTOR (2 DOWNTO 0) := (OTHERS => '0');
 
-SIGNAL RS_Data_ID:	STD_LOGIC_VECTOR (15 DOWNTO 0);	-- Data de RS e RT que sai do componente "Registers"
-SIGNAL RT_Data_ID:	STD_LOGIC_VECTOR (15 DOWNTO 0);
+SIGNAL RS_Data_ID:	STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');	-- Data de RS e RT que sai do componente "Registers"
+SIGNAL RT_Data_ID:	STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');
 
-SIGNAL Offset_ID:		STD_LOGIC_VECTOR (15 DOWNTO 0);	-- Signs-extend do offset (13b -> 16b)
+SIGNAL Offset_ID:		STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');	-- Signs-extend do offset (13b -> 16b)
 
 
 ----- EX -----
 
-SIGNAL WB_EX:	STD_LOGIC_VECTOR (1 DOWNTO 0);	-- Sinais, de controle, que vem do ID
-SIGNAL M_EX:	STD_LOGIC_VECTOR (1 DOWNTO 0);
+SIGNAL WB_EX:	STD_LOGIC_VECTOR (1 DOWNTO 0) := (OTHERS => '0');	-- Sinais, de controle, que vem do ID
+SIGNAL M_EX:	STD_LOGIC_VECTOR (1 DOWNTO 0) := (OTHERS => '0');
 
-SIGNAL RegDst:	STD_LOGIC;	-- Os 3 bits do EX_ID
-SIGNAL ALUOp:	STD_LOGIC;
-SIGNAL ALUSrc:	STD_LOGIC;
+SIGNAL RegDst:	STD_LOGIC := '0';	-- Os 3 bits do EX_ID
+SIGNAL ALUOp:	STD_LOGIC := '0';
+SIGNAL ALUSrc:	STD_LOGIC := '0';
 
-SIGNAL PC_2_EX:		STD_LOGIC_VECTOR (15 DOWNTO 0);	-- Cálculo do pc
-SIGNAL Offset_EX:		STD_LOGIC_VECTOR (15 DOWNTO 0);
-SIGNAL Offset_EX_2:	STD_LOGIC_VECTOR (15 DOWNTO 0);
-SIGNAL PC_EX:			STD_LOGIC_VECTOR (15 DOWNTO 0);
+SIGNAL PC_2_EX:		STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');	-- Cálculo do pc
+SIGNAL Offset_EX:		STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');
+SIGNAL Offset_EX_2:	STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');
+SIGNAL PC_EX:			STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');
 SIGNAL LIXO:			STD_LOGIC;
 
 
-SIGNAL RT_Data_EX:	STD_LOGIC_VECTOR (15 DOWNTO 0);	-- ULA
-SIGNAL Src_A:			STD_LOGIC_VECTOR (15 DOWNTO 0);
-SIGNAL Src_B:			STD_LOGIC_VECTOR (15 DOWNTO 0);
-SIGNAL ALU_R_EX:		STD_LOGIC_VECTOR (15 DOWNTO 0);
-SIGNAL Add_Sub:		STD_LOGIC;
-SIGNAL Zero_EX:		STD_LOGIC;
-SIGNAL overflow_EX:	STD_LOGIC;
+SIGNAL RT_Data_EX:	STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');	-- ULA
+SIGNAL Src_A:			STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');
+SIGNAL Src_B:			STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');
+SIGNAL ALU_R_EX:		STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');
+SIGNAL Add_Sub:		STD_LOGIC := '0';
+SIGNAL Zero_EX:		STD_LOGIC := '0';
+SIGNAL overflow_EX:	STD_LOGIC := '0';
 
-SIGNAL RT_EX:	STD_LOGIC_VECTOR (3 DOWNTO 0);	-- Endereços
-SIGNAL RD_EX:	STD_LOGIC_VECTOR (3 DOWNTO 0);
-SIGNAL RW_EX:	STD_LOGIC_VECTOR (3 DOWNTO 0);
+SIGNAL RT_EX:	STD_LOGIC_VECTOR (3 DOWNTO 0) := (OTHERS => '0');	-- Endereços
+SIGNAL RD_EX:	STD_LOGIC_VECTOR (3 DOWNTO 0) := (OTHERS => '0');
+SIGNAL RW_EX:	STD_LOGIC_VECTOR (3 DOWNTO 0) := (OTHERS => '0');
 
 
 ----- MEM -----
 
-SIGNAL WB_MEM:			STD_LOGIC_VECTOR (1 DOWNTO 0);	-- Sinal de controle que vem do EX
+SIGNAL WB_MEM:			STD_LOGIC_VECTOR (1 DOWNTO 0) := (OTHERS => '0');	-- Sinal de controle que vem do EX
 
-SIGNAL MemWrite:	STD_LOGIC;	-- 3 bits do M_EX + sinal zero que vem do EX
-SIGNAL MemRead:	STD_LOGIC;
-SIGNAL Branch:		STD_LOGIC;
-SIGNAL Zero_MEM:	STD_LOGIC;	
+SIGNAL MemWrite:	STD_LOGIC := '0';	-- 3 bits do M_EX + sinal zero que vem do EX
+SIGNAL MemRead:	STD_LOGIC := '0';
+SIGNAL Branch:		STD_LOGIC := '0';
+SIGNAL Zero_MEM:	STD_LOGIC := '0';	
 
-SIGNAL PCSrc:			STD_LOGIC;	-- Sinal de controle
+SIGNAL PCSrc:			STD_LOGIC := '0';	-- Sinal de controle
 
-SIGNAL PC_MEM:	STD_LOGIC_VECTOR (15 DOWNTO 0);	-- Contem pc calculado no EX
+SIGNAL PC_MEM:	STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');	-- Contem pc calculado no EX
 
-SIGNAL ALU_R_MEM:			STD_LOGIC_VECTOR (15 DOWNTO 0);	-- Data memory
-SIGNAL RT_Data_MEM:		STD_LOGIC_VECTOR (15 DOWNTO 0);
-SIGNAL Read_Data_MEM:	STD_LOGIC_VECTOR (15 DOWNTO 0);
+SIGNAL ALU_R_MEM:			STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');	-- Data memory
+SIGNAL RT_Data_MEM:		STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');
+SIGNAL Read_Data_MEM:	STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');
 
-SIGNAL RW_MEM:	STD_LOGIC_VECTOR (3 DOWNTO 0);	-- Endereço que vem do EX
+SIGNAL RW_MEM:	STD_LOGIC_VECTOR (3 DOWNTO 0) := (OTHERS => '0');	-- Endereço que vem do EX
 
 
 ----- WB -----
 
-SIGNAL RegWrite:	STD_LOGIC;	-- 2 bits do WB_MEM
-SIGNAL MemtoReg:	STD_LOGIC;
+SIGNAL RegWrite:	STD_LOGIC := '0';	-- 2 bits do WB_MEM
+SIGNAL MemtoReg:	STD_LOGIC := '0';
 
-SIGNAL Read_Data_WB:	STD_LOGIC_VECTOR (15 DOWNTO 0);	-- Definindo write data
-SIGNAL ALU_R_WB:		STD_LOGIC_VECTOR (15 DOWNTO 0);
-SIGNAL Write_Data:	STD_LOGIC_VECTOR (15 DOWNTO 0);
+SIGNAL Read_Data_WB:	STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');	-- Definindo write data
+SIGNAL ALU_R_WB:		STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');
+SIGNAL Write_Data:	STD_LOGIC_VECTOR (15 DOWNTO 0) := (OTHERS => '0');
 
-SIGNAL RW_WB:	STD_LOGIC_VECTOR (3 DOWNTO 0);	-- Endereço que vem do MEM
+SIGNAL RW_WB:	STD_LOGIC_VECTOR (3 DOWNTO 0) := (OTHERS => '0');	-- Endereço que vem do MEM
 
 
 BEGIN
+
+view_regis <= sw (3 DOWNTO 0);
 
 ---------------------------------------
 
@@ -136,7 +151,32 @@ ClockDivide: PROCESS
    END PROCESS;
 
 
+	
+	
+------------------------------------
 
+--- PROCESS PARA O PHASE COUNTER ---
+
+------------------------------------
+
+-- Processo síncrono que avança o contador a cada borda de clock
+PhaseCounterProc: PROCESS (clock)
+	BEGIN
+		IF rising_edge(clock) THEN
+			if phase_cnt = (MAX_PHASE - 1) then
+				phase_cnt <= 0;
+			else
+				phase_cnt <= phase_cnt + 1;
+			end if;
+		end if;
+END PROCESS PhaseCounterProc;
+
+-- Decodificação simples (comPORTamento contínuo)
+Global_In  <= '1' WHEN (phase_cnt >= N AND phase_cnt < 2*N) ELSE '0';
+Global_Out <= '1' WHEN (phase_cnt >= 3*N AND phase_cnt < 4*N) ELSE '0';
+
+	
+	
 	
 --- IF: FETCH DA INSTRUçãO DA MEMóRIA ---
 
@@ -167,7 +207,7 @@ S_IF_ID:	if_id	PORT MAP (	PC_2_IF, Inst_IF, 	-- Entra
 
 S_Control:		control		PORT MAP ( inst_ID, wb_ID, m_ID, ex_ID );	-- Unidade de Controle
 
-S_Registers:	registers	PORT MAP ( Inst_ID(12 DOWNTO 9), Inst_ID(8 DOWNTO 5), RW_WB, clock, Write_Data, RegWrite, RS_Data_ID, RT_Data_ID );	-- Componente dos Registradores
+S_Registers:	registers	PORT MAP ( Inst_ID(12 DOWNTO 9), Inst_ID(8 DOWNTO 5), RW_WB, clock, Write_Data, RegWrite, RS_Data_ID, RT_Data_ID, view_regis, view_regis_data );	-- Componente dos Registradores
 
 Offset_ID(15 DOWNTO 13) <= "000";	-- Sign-extend (13b -> 16b)
 Offset_ID(12 Downto 0) 	<= Inst_ID(12 DOWNTO 0);
@@ -243,5 +283,13 @@ Mux_2_1_WB:	mux_2_1_16b	PORT MAP ( Read_Data_WB, ALU_R_WB, MemtoReg, Write_Data 
 
 
 
+
+--- 
+
+Led_Reg_n:	multplex_led_hex	PORT MAP	( view_regis, hex0 );
+Led_1_de_4:	multplex_led_hex	PORT MAP	( view_regis_data( 3 DOWNTO  0), hex2 );
+Led_2_de_4:	multplex_led_hex	PORT MAP	( view_regis_data( 7 DOWNTO  4), hex3 );
+Led_3_de_4:	multplex_led_hex	PORT MAP	( view_regis_data(11 DOWNTO  8), hex4 );
+Led_4_de_4:	multplex_led_hex	PORT MAP	( view_regis_data(15 DOWNTO 12), hex5 );
 
 END ARCHITECTURE;

@@ -17,12 +17,12 @@ architecture structure of pc is
     ----------------------------------------------------------------------------
     -- Sinal "mid"
     ----------------------------------------------------------------------------
-    signal PC_mid    : std_logic_vector(15 downto 0);
+    signal PC_mid    : std_logic_vector(15 downto 0) := (others => '0');
 
     ----------------------------------------------------------------------------
     -- Sinal "aux" que entra/saí do mux
     ----------------------------------------------------------------------------
-    signal PC_out_aux: std_logic_vector(15 downto 0);
+    signal PC_out_aux: std_logic_vector(15 downto 0) := (others => '0');
 
 begin
 

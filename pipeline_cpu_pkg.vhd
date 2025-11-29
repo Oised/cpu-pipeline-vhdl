@@ -87,7 +87,9 @@ component registers
     WriteData : in  std_logic_vector(15 downto 0);
     RegWrite  : in  std_logic;
     RS_Data   : out std_logic_vector(15 downto 0);
-    RT_Data   : out std_logic_vector(15 downto 0)
+    RT_Data   : out std_logic_vector(15 downto 0);
+	 view_regis: in  std_logic_vector(3 downto 0);
+	 view_regis_data: out std_logic_vector(15 downto 0)
   );
 end component;
 
@@ -205,6 +207,13 @@ component regis16
 		Clock : in  std_logic;
 		Rin   : in  std_logic;
 		R     : out std_logic_vector(15 downto 0)
+	);
+end component;
+
+component multplex_led_hex
+	port( 
+		x   : in  std_logic_vector (3 downto 0);
+		hex : out std_logic_vector (0 to 6)
 	);
 end component;
 
