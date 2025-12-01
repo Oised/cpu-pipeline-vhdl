@@ -24,7 +24,7 @@ SIGNAL view_regis_data: STD_LOGIC_VECTOR(15 DOWNTO 0);
 
 ----- Clock -----
 
-CONSTANT max: INTEGER := 10;					-- Ciclo do clock (é ajustável)
+CONSTANT max: INTEGER := 5000;					-- Ciclo do clock (é ajustável)
 CONSTANT half: INTEGER := max/2;				-- Meio Ciclo
 SIGNAL clockticks: INTEGER RANGE 0 TO max;-- Conta cada ciclo do clock de entrada
 SIGNAL clock: STD_LOGIC;
@@ -33,7 +33,7 @@ SIGNAL clock: STD_LOGIC;
 ----- Sinais de Sincronização -----
 
 -- Parâmetros
-CONSTANT N        : INTEGER := 1;		-- <-- ajuste aqui (por ex. 100)
+CONSTANT N        : INTEGER := 4;		-- <-- ajuste aqui (por ex. 100)
 CONSTANT MAX_PHASE: INTEGER := 4 * N;
 
 -- Contador de fase
@@ -259,7 +259,7 @@ S_EX_MEM:	ex_mem	PORT MAP (	WB_EX, M_EX, PC_EX, Zero_EX, ALU_R_EX, RT_Data_EX, R
 
 PCSrc <= Branch AND Zero_MEM;
  
-Data_Mem:	data_memory	PORT MAP ( ALU_R_MEM, RT_Data_MEM, MemRead, MemWrite, Read_Data_MEM );	-- Componente da Memória
+Data_Mem:	data_memory	PORT MAP ( clock, ALU_R_MEM, RT_Data_MEM, MemRead, MemWrite, Read_Data_MEM );	-- Componente da Memória
 
 
 
@@ -279,7 +279,7 @@ S_MEM_WB:	mem_wb	PORT MAP ( 	WB_MEM, Read_Data_MEM, ALU_R_MEM, RW_MEM, 				-- En
 
 --- WB: ESCRITA DO RESULTADO DE VOLTA AO REGISTRADOR ---
 
-Mux_2_1_WB:	mux_2_1_16b	PORT MAP ( Read_Data_WB, ALU_R_WB, MemtoReg, Write_Data );	-- Definição do que sera (data) escrito/salvo
+Mux_2_1_WB:	mux_2_1_16b	PORT MAP ( ALU_R_WB, Read_Data_WB, MemtoReg, Write_Data );	-- Definição do que sera (data) escrito/salvo
 
 
 

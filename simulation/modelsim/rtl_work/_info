@@ -8,7 +8,7 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/simulation/modelsim
+Z0 dC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/simulation/modelsim
 Ealu_16b
 Z1 w1764375792
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
@@ -16,19 +16,19 @@ Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 3
 R0
-Z5 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/alu_16b.vhd
-Z6 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/alu_16b.vhd
+Z5 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd
+Z6 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd
 l0
 L5 1
 VbBCYJcbR7oX<bOdQ6h6W=1
 !s100 >T_NH9X9Ta7_NcKe>;`S<1
 Z7 OV;C;2020.1;71
 31
-Z8 !s110 1764453714
+Z8 !s110 1764609271
 !i10b 1
-Z9 !s108 1764453713.000000
-Z10 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/alu_16b.vhd|
-Z11 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/alu_16b.vhd|
+Z9 !s108 1764609271.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd|
+Z11 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd|
 !i113 1
 Z12 o-93 -work work
 Z13 tExplicit 1 CvgOpt 0
@@ -53,24 +53,24 @@ R11
 R12
 R13
 Ealu_control
-R1
+Z14 w1764454919
 R3
 R4
 !i122 7
 R0
-Z14 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/alu_control.vhd
-Z15 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/alu_control.vhd
+Z15 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_control.vhd
+Z16 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_control.vhd
 l0
 L4 1
 V^Da@m8mdPQ0=f4ID``Dn<2
 !s100 kh@3;]znX`6cHKEW_V1Lh2
 R7
 31
-R8
+Z17 !s110 1764609272
 !i10b 1
-Z16 !s108 1764453714.000000
-Z17 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/alu_control.vhd|
-Z18 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/alu_control.vhd|
+Z18 !s108 1764609272.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_control.vhd|
+Z20 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_control.vhd|
 !i113 1
 R12
 R13
@@ -85,22 +85,22 @@ VY:nObA86biFc2KG@gi5kz3
 !s100 fj][`QHdRzSKWBU?P3h491
 R7
 31
-R8
-!i10b 1
-R16
 R17
+!i10b 1
 R18
+R19
+R20
 !i113 1
 R12
 R13
 Econtrol
-R1
+R14
 R3
 R4
 !i122 5
 R0
-Z19 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/control.vhd
-Z20 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/control.vhd
+Z21 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd
+Z22 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd
 l0
 L4 1
 V^Ej7G_Xb1K@6b2>_g;PBD3
@@ -109,9 +109,9 @@ R7
 31
 R8
 !i10b 1
-R16
-Z21 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/control.vhd|
-Z22 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/control.vhd|
+R9
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd|
+Z24 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd|
 !i113 1
 R12
 R13
@@ -128,193 +128,193 @@ R7
 31
 R8
 !i10b 1
-R16
-R21
-R22
+R9
+R23
+R24
 !i113 1
 R12
 R13
 Edata_memory
-R1
+Z25 w1764601307
 R2
 R3
 R4
 !i122 8
 R0
-Z23 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/data_memory.vhd
-Z24 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/data_memory.vhd
+Z26 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd
+Z27 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd
 l0
 L6 1
-Vd4AaD:D;DWWN675T^OFn`3
-!s100 PTZO^l:a`=b[WaR70lfYJ0
+VX_Z_a[7Laj<b;cHbG5FD80
+!s100 `7[h:^3PY[MZ:>E]SaekP3
 R7
 31
-R8
+R17
 !i10b 1
-R16
-Z25 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/data_memory.vhd|
-Z26 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/data_memory.vhd|
+R18
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd|
+Z29 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd|
 !i113 1
 R12
 R13
-Astructure
+Artl
 R2
 R3
 R4
-DEx4 work 11 data_memory 0 22 d4AaD:D;DWWN675T^OFn`3
+DEx4 work 11 data_memory 0 22 X_Z_a[7Laj<b;cHbG5FD80
 !i122 8
-l21
-L16 35
-Vl14dN=<DS<zYZ4FdkXZ`91
-!s100 hei51IO75d@o[WF5]0QKn1
+l59
+L17 74
+Vb@mF6`WhJdeFFP?^beJFA1
+!s100 ;5VKoInMDL3I0hoH5oMIF3
 R7
 31
-R8
+R17
 !i10b 1
-R16
-R25
-R26
+R18
+R28
+R29
 !i113 1
 R12
 R13
 Eex_mem
-R1
-Z27 DPx4 work 16 pipeline_cpu_pkg 0 22 :19ZKeN;3CJ^Xb:KP=83g3
+Z30 w1764602698
+Z31 DPx4 work 16 pipeline_cpu_pkg 0 22 T[A22XV0kPI0]hK<KT5fR1
 R3
 R4
 !i122 17
 R0
-Z28 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/ex_mem.vhd
-Z29 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/ex_mem.vhd
+Z32 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd
+Z33 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd
 l0
 L5 1
-V:<L[4KoeAlUnie;Z14Pd50
-!s100 Oj_j0mNRzZ9zDon8h9PWm3
+VjZ]Rk:KV<EKeU^dIQ1hLj0
+!s100 H>M2J6gk=hmRoBRa>1[E`1
 R7
 31
-Z30 !s110 1764453715
+Z34 !s110 1764609273
 !i10b 1
-Z31 !s108 1764453715.000000
-Z32 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/ex_mem.vhd|
-Z33 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/ex_mem.vhd|
+Z35 !s108 1764609273.000000
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd|
+Z37 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd|
 !i113 1
 R12
 R13
 Astructure
-R27
+R31
 R3
 R4
-DEx4 work 6 ex_mem 0 22 :<L[4KoeAlUnie;Z14Pd50
+DEx4 work 6 ex_mem 0 22 jZ]Rk:KV<EKeU^dIQ1hLj0
 !i122 17
-l61
-L29 76
-VGHO<A36^l=0n[j7<`98jU0
-!s100 K=ea_T7F<C@IiPV2I=I:N3
+l53
+L29 80
+VfNbifVL@TQamB6YN]?0_N1
+!s100 _i8a4dOe`@<8Aj7MHgi:A3
 R7
 31
-R30
+R34
 !i10b 1
-R31
-R32
-R33
-!i113 1
-R12
-R13
-Eid_ex
-R1
-R27
-R3
-R4
-!i122 16
-R0
-Z34 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/id_ex.vhd
-Z35 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/id_ex.vhd
-l0
-L5 1
-V9DYB>6g_c6n7o1gQV>m:g3
-!s100 85YDOE4WZofW[a?iOZ`5L0
-R7
-31
-R30
-!i10b 1
-R31
-Z36 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/id_ex.vhd|
-Z37 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/id_ex.vhd|
-!i113 1
-R12
-R13
-Astructure
-R27
-R3
-R4
-DEx4 work 5 id_ex 0 22 9DYB>6g_c6n7o1gQV>m:g3
-!i122 16
-l67
-L33 87
-V>ZiD:fIiD1`d^H=a3g3MP0
-!s100 A^_i:XkMXLAU1QEf0I1e30
-R7
-31
-R30
-!i10b 1
-R31
+R35
 R36
 R37
 !i113 1
 R12
 R13
-Eif_id
-R1
-R27
+Eid_ex
+Z38 w1764602971
+R31
 R3
 R4
-!i122 15
+!i122 16
 R0
-Z38 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/if_id.vhd
-Z39 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/if_id.vhd
+Z39 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd
+Z40 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd
 l0
 L5 1
-VlX^R=>Ri0aK>VC:I0IGod2
-!s100 aGLTQc2Y=@Ho8lgUb_53Y0
+VN@g6:g<NMQfGdL9DfXoj]1
+!s100 g9eK<:l8hfR@ohBN8>2[a3
 R7
 31
-R30
+R34
 !i10b 1
-R31
-Z40 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/if_id.vhd|
-Z41 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/if_id.vhd|
+R35
+Z41 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd|
+Z42 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd|
 !i113 1
 R12
 R13
 Astructure
-R27
+R31
 R3
 R4
-DEx4 work 5 if_id 0 22 lX^R=>Ri0aK>VC:I0IGod2
-!i122 15
-l25
-L17 19
-V=jo7e>E68n3G=BPkKb4Ez1
-!s100 gC2=eX31]J4MKBWMIZz653
+DEx4 work 5 id_ex 0 22 N@g6:g<NMQfGdL9DfXoj]1
+!i122 16
+l62
+L33 92
+VokBO4WS8?oX?eLS]]daR13
+!s100 9RL:Ol2;:eo:ccEdNOK;90
 R7
 31
-R30
+R34
 !i10b 1
-R31
-R40
+R35
 R41
+R42
+!i113 1
+R12
+R13
+Eif_id
+Z43 w1764602952
+R31
+R3
+R4
+!i122 15
+R0
+Z44 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd
+Z45 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd
+l0
+L5 1
+V2?:JmA0h7dPZ=ZI6E:FZJ0
+!s100 i=[1lDA:5NIL9o2_]K2;A3
+R7
+31
+R34
+!i10b 1
+R35
+Z46 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd|
+Z47 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd|
+!i113 1
+R12
+R13
+Astructure
+R31
+R3
+R4
+DEx4 work 5 if_id 0 22 2?:JmA0h7dPZ=ZI6E:FZJ0
+!i122 15
+l27
+L17 36
+VYA82eej@52N;QHNF5O5^50
+!s100 H@a;l<TEXEHi:IMOC<MSk2
+R7
+31
+R34
+!i10b 1
+R35
+R46
+R47
 !i113 1
 R12
 R13
 Einst_mem
-Z42 w1764375793
+Z48 w1764599114
 R2
 R3
 R4
 !i122 4
 R0
-Z43 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/inst_mem.vhd
-Z44 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/inst_mem.vhd
+Z49 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd
+Z50 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd
 l0
 L5 1
 V:j:gkCQ2^6=:CVaiLoBkP1
@@ -323,9 +323,9 @@ R7
 31
 R8
 !i10b 1
-R16
-Z45 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/inst_mem.vhd|
-Z46 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/inst_mem.vhd|
+R9
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd|
+Z52 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd|
 !i113 1
 R12
 R13
@@ -337,80 +337,80 @@ DEx4 work 8 inst_mem 0 22 :j:gkCQ2^6=:CVaiLoBkP1
 !i122 4
 l33
 L12 47
-V5CEhI<o6EKVWY84G[_U7S2
-!s100 `]16mVJ]h]W0Y<``z9hQz2
+V[m3GXf?ng=CUR^B[khJIR3
+!s100 006B2aXBYzU5oUk8R>b;Q2
 R7
 31
 R8
 !i10b 1
-R16
-R45
-R46
+R9
+R51
+R52
 !i113 1
 R12
 R13
 Emem_wb
-R42
-R27
+Z53 w1764602933
+R31
 R3
 R4
 !i122 18
 R0
-Z47 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/mem_wb.vhd
-Z48 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/mem_wb.vhd
+Z54 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd
+Z55 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd
 l0
 L5 1
-VD;ad]`5DK>P1ZKZGkMgKo2
-!s100 1EKW@Ob3kKiJQmQJh7e[g3
+V98M1]e=`LcJDd<TIjSBVB2
+!s100 ee3kg3bR<mCofJzznU4HT2
 R7
 31
-R30
+R34
 !i10b 1
-R31
-Z49 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/mem_wb.vhd|
-!s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/mem_wb.vhd|
+R35
+Z56 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd|
+!s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd|
 !i113 1
 R12
 R13
 Astructure
-R27
+R31
 R3
 R4
-DEx4 work 6 mem_wb 0 22 D;ad]`5DK>P1ZKZGkMgKo2
+DEx4 work 6 mem_wb 0 22 98M1]e=`LcJDd<TIjSBVB2
 !i122 18
-l47
-L22 51
-V624X;G>LcS3MhiKl[A;;=1
-!s100 <?j[3J4<K7PbRBX?mkV8n2
+l39
+L22 55
+V[6Y6cT<NH`Kz3`=zK76h`0
+!s100 m92JU<PMI5dj:XC8`EAZX0
 R7
 31
-R30
+R34
 !i10b 1
-R31
-R49
-Z50 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/mem_wb.vhd|
+R35
+R56
+Z57 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd|
 !i113 1
 R12
 R13
 Emultplex_led_hex
-Z51 w1755361693
+Z58 w1755361693
 R3
 R4
 !i122 12
 R0
-Z52 8C:/quartus directory/proj1_cpu_s2_25/multplex_led_hex.vhd
-Z53 FC:/quartus directory/proj1_cpu_s2_25/multplex_led_hex.vhd
+Z59 8C:/quartus directory/proj1_cpu_s2_25/multplex_led_hex.vhd
+Z60 FC:/quartus directory/proj1_cpu_s2_25/multplex_led_hex.vhd
 l0
 L4 1
 V`Cn:Iod2ob8j<eF3PE6OE3
 !s100 n9;VR:bB@]O1SeUadbOW32
 R7
 31
-R30
+R17
 !i10b 1
-R31
-Z54 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj1_cpu_s2_25/multplex_led_hex.vhd|
-Z55 !s107 C:/quartus directory/proj1_cpu_s2_25/multplex_led_hex.vhd|
+R18
+Z61 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj1_cpu_s2_25/multplex_led_hex.vhd|
+Z62 !s107 C:/quartus directory/proj1_cpu_s2_25/multplex_led_hex.vhd|
 !i113 1
 R12
 R13
@@ -425,33 +425,33 @@ VB?_OE_]X[R;7`F39X<^5:3
 !s100 _=bJViH>Fa:aAfjjFk@=P2
 R7
 31
-R30
+R17
 !i10b 1
-R31
-R54
-R55
+R18
+R61
+R62
 !i113 1
 R12
 R13
 Emux_2_1_16b
-Z56 w1764384154
+R14
 R3
 R4
 !i122 1
 R0
-Z57 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/mux_2_1_16b.vhd
-Z58 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/mux_2_1_16b.vhd
+Z63 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd
+Z64 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd
 l0
 L4 1
 V4UEkRhTYAkMWdFP4zonkR0
 !s100 dTPglFJQ2M;1WBR:jEkkf1
 R7
 31
-Z59 !s110 1764453713
+R8
 !i10b 1
 R9
-Z60 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/mux_2_1_16b.vhd|
-Z61 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/mux_2_1_16b.vhd|
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd|
+Z66 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd|
 !i113 1
 R12
 R13
@@ -461,38 +461,38 @@ R4
 DEx4 work 11 mux_2_1_16b 0 22 4UEkRhTYAkMWdFP4zonkR0
 !i122 1
 l14
-Z62 L13 11
+Z67 L13 11
 V[Q0716G6O4nlnQ?:V`3_T1
 !s100 lko9og?ZQNCQmeFMF8cZZ0
 R7
 31
-R59
+R8
 !i10b 1
 R9
-R60
-R61
+R65
+R66
 !i113 1
 R12
 R13
 Emux_2_1_4b
-R42
+Z68 w1764375793
 R3
 R4
 !i122 2
 R0
-Z63 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/mux_2_1_4b.vhd
-Z64 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/mux_2_1_4b.vhd
+Z69 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd
+Z70 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd
 l0
 L4 1
 V=_`bzHPbA>?BBd9aKo<1>0
 !s100 =7eoU>H079aUD0[`zg_eX2
 R7
 31
-R59
+R8
 !i10b 1
 R9
-Z65 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/mux_2_1_4b.vhd|
-Z66 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/mux_2_1_4b.vhd|
+Z71 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd|
+Z72 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd|
 !i113 1
 R12
 R13
@@ -502,88 +502,88 @@ R4
 DEx4 work 10 mux_2_1_4b 0 22 =_`bzHPbA>?BBd9aKo<1>0
 !i122 2
 l14
-R62
+R67
 VXa7]CdAV;=>mdRWZQ:0P=3
 !s100 ^7IlXjTm=AmEHo`?LT6:L0
 R7
 31
-R59
+R8
 !i10b 1
 R9
-R65
-R66
+R71
+R72
 !i113 1
 R12
 R13
 Epc
-Z67 w1764383830
-R27
+Z73 w1764603772
+R31
 R3
 R4
 !i122 14
 R0
-Z68 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/pc.vhd
-Z69 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/pc.vhd
+Z74 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd
+Z75 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd
 l0
 L5 1
-VCHz<5mi^Q=D[;TVi1?l]:2
-!s100 :YHAf9Z[0GlfX9DlKd=:00
+V`H1gc54I:2Ne5OO]g:GMZ2
+!s100 0ij:>WZM>^neB0]9Fa7Ue3
 R7
 31
-R30
+R34
 !i10b 1
-R31
-Z70 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/pc.vhd|
-Z71 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/pc.vhd|
+R18
+Z76 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd|
+Z77 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd|
 !i113 1
 R12
 R13
 Astructure
-R27
+R31
 R3
 R4
-DEx4 work 2 pc 0 22 CHz<5mi^Q=D[;TVi1?l]:2
+DEx4 work 2 pc 0 22 `H1gc54I:2Ne5OO]g:GMZ2
 !i122 14
 l27
-L15 19
-VLbE5h>LeSOJ2dg:f@Tb1Y1
-!s100 CaL24WjQgh<D53e2Ddm^W2
+L15 35
+VY9Z3UY_]EfBB:bHaMhYk80
+!s100 WU<;kzM]NgkD^YoWNk@^31
 R7
 31
-R30
+R34
 !i10b 1
-R31
-R70
-R71
+R18
+R76
+R77
 !i113 1
 R12
 R13
 Epipeline_cpu
-Z72 w1764453691
-R27
+Z78 w1764609264
+R31
 R2
 R3
 R4
 !i122 13
 R0
-Z73 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/pipeline_cpu.vhd
-Z74 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/pipeline_cpu.vhd
+Z79 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd
+Z80 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd
 l0
 L8 1
 VaI46lzU64KGSNh<90ISHQ1
 !s100 [BLoZ:F9Q7EXFH>U_YBDo2
 R7
 31
-R30
+R17
 !i10b 1
-R31
-Z75 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/pipeline_cpu.vhd|
-Z76 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/pipeline_cpu.vhd|
+R18
+Z81 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd|
+Z82 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd|
 !i113 1
 R12
 R13
 Astructure
-R27
+R31
 R2
 R3
 R4
@@ -591,15 +591,15 @@ DEx4 work 12 pipeline_cpu 0 22 aI46lzU64KGSNh<90ISHQ1
 !i122 13
 l132
 L20 276
-V]M?5VTDkZfzCmOljg?Yhk2
-!s100 Hj6knZb=9@N]44`A[blzJ0
+V1<SmOjRAjLCXTEQ9DUHk?1
+!s100 <`gVE2Ql?UFXY2Un47zUS1
 R7
 31
-R30
+R17
 !i10b 1
-R31
-R75
-R76
+R18
+R81
+R82
 !i113 1
 R12
 R13
@@ -607,115 +607,115 @@ Ppipeline_cpu_pkg
 R3
 R4
 !i122 0
-R72
+w1764601445
 R0
-8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/pipeline_cpu_pkg.vhd
-FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/pipeline_cpu_pkg.vhd
+8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu_pkg.vhd
+FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu_pkg.vhd
 l0
 L4 1
-V:19ZKeN;3CJ^Xb:KP=83g3
-!s100 ;FNI6QzR^Mh6No`]PI`:12
+VT[A22XV0kPI0]hK<KT5fR1
+!s100 [;BPn31X2QK`cggaaMB2A2
 R7
 31
-R59
+R8
 !i10b 1
 R9
-!s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/pipeline_cpu_pkg.vhd|
-!s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/pipeline_cpu_pkg.vhd|
+!s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu_pkg.vhd|
+!s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu_pkg.vhd|
 !i113 1
 R12
 R13
 Eregis16
-R42
+Z83 w1764605853
 R3
 R4
 !i122 10
 R0
-Z77 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/regis16.vhd
-Z78 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/regis16.vhd
+Z84 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd
+Z85 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd
 l0
 L4 1
-VTJMlo]4YUh^IRnc;UJOC71
-!s100 AHCU@U89=0=9Rl6o9kSS41
+VgDRTV:n=]0cZOi4h2_n[K2
+!s100 z:9A3;59fRfYmYc@7iDTo1
 R7
 31
-R8
+R17
 !i10b 1
-R16
-Z79 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/regis16.vhd|
-Z80 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/regis16.vhd|
+R18
+Z86 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd|
+Z87 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd|
 !i113 1
 R12
 R13
 Astructure
 R3
 R4
-DEx4 work 7 regis16 0 22 TJMlo]4YUh^IRnc;UJOC71
+DEx4 work 7 regis16 0 22 gDRTV:n=]0cZOi4h2_n[K2
 !i122 10
 l14
-Z81 L13 13
+Z88 L13 13
 VK6;=bXchne[;:Z7138`]I3
 !s100 =F:9HkGeNi2K_DUQA7GG32
 R7
 31
-R8
+R17
 !i10b 1
-R16
-R79
-R80
+R18
+R86
+R87
 !i113 1
 R12
 R13
 Eregis4
-R42
+Z89 w1764605852
 R3
 R4
 !i122 11
 R0
-Z82 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/regis4.vhd
-Z83 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/regis4.vhd
+Z90 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd
+Z91 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd
 l0
 L4 1
-V<faKk73>:?LGa8aPBYHbG2
-!s100 BPX8MQa7@JcJMX]`o2^R<3
+Vk>CIz8PL48lBQ<ZWgTo3Q0
+!s100 =iG7Vn0mBgWBa_LogM0nG1
 R7
 31
-R8
+R17
 !i10b 1
-R16
-Z84 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/regis4.vhd|
-Z85 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/regis4.vhd|
+R18
+Z92 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd|
+Z93 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd|
 !i113 1
 R12
 R13
 Astructure
 R3
 R4
-DEx4 work 6 regis4 0 22 <faKk73>:?LGa8aPBYHbG2
+DEx4 work 6 regis4 0 22 k>CIz8PL48lBQ<ZWgTo3Q0
 !i122 11
 l14
-R81
+R88
 VmeHeSDL]hW;OR6NZ89gH`2
 !s100 C6e_RD3eB3MaVS660^g4I1
 R7
 31
-R8
+R17
 !i10b 1
-R16
-R84
-R85
+R18
+R92
+R93
 !i113 1
 R12
 R13
 Eregisters
-Z86 w1764453564
+R14
 R2
 R3
 R4
 !i122 6
 R0
-Z87 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/registers.vhd
-Z88 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/registers.vhd
+Z94 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd
+Z95 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd
 l0
 L5 1
 VZHoA;D]=AgMWJXKZ9mF:73
@@ -724,9 +724,9 @@ R7
 31
 R8
 !i10b 1
-R16
-Z89 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/registers.vhd|
-Z90 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/registers.vhd|
+R9
+Z96 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd|
+Z97 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd|
 !i113 1
 R12
 R13
@@ -744,32 +744,32 @@ R7
 31
 R8
 !i10b 1
-R16
-R89
-R90
+R9
+R96
+R97
 !i113 1
 R12
 R13
 Eshiftl_1
-R42
+R68
 R2
 R3
 R4
 !i122 9
 R0
-Z91 8C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/shiftl_1.vhd
-Z92 FC:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/shiftl_1.vhd
+Z98 8C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd
+Z99 FC:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd
 l0
 L5 1
 VcEX?Ba]bVdS@11@T5m57O2
 !s100 eJgLo5jf1z3UHaDKz6J:?2
 R7
 31
-R8
+R17
 !i10b 1
-R16
-Z93 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/shiftl_1.vhd|
-Z94 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/teste/cpu-pipeline-vhdl-dev-otavio/cpu-pipeline-vhdl-dev-otavio/shiftl_1.vhd|
+R18
+Z100 !s90 -reportprogress|300|-93|-work|work|C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd|
+Z101 !s107 C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd|
 !i113 1
 R12
 R13
@@ -785,11 +785,11 @@ Vim]fkRm^1nI6d`<jNozm71
 !s100 oj[_FC9;Y[]?V4Hm2iC2H0
 R7
 31
-R8
+R17
 !i10b 1
-R16
-R93
-R94
+R18
+R100
+R101
 !i113 1
 R12
 R13

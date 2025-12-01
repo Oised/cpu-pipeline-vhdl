@@ -12,11 +12,11 @@ end inst_mem;
 architecture structure of inst_mem is
 
 signal instructions: std_logic_vector(511 downto 0) :=
-        "0000000000000000" & -- palavra 0
-        "0000000000000000" & -- palavra 1
-        "0000000000000000" & -- palavra 2
-        "0000000000000000" & -- palavra 3
-        "0000000000000000" & -- palavra 4
+        "0010000000000000" & -- palavra 0
+        "0010001000000001" & -- palavra 1
+        "0010010000000010" & -- palavra 2
+        "0010011000000011" & -- palavra 3
+        "0010101000000101" & -- palavra 4
         "0000000000000000" & -- palavra 5
         "0000000000000000" & -- palavra 6
         "0000000000000000" & -- palavra 7

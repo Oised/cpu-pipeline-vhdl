@@ -1,1 +1,355 @@
 # Reading pref.tcl
+# do pipeline_cpu_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu_pkg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:31 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package pipeline_cpu_pkg
+# End time: 14:14:31 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:31 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2_1_16b
+# -- Compiling architecture structure of mux_2_1_16b
+# End time: 14:14:31 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:31 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_2_1_4b
+# -- Compiling architecture structure of mux_2_1_4b
+# End time: 14:14:31 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:31 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu_16b
+# -- Compiling architecture behavior of alu_16b
+# End time: 14:14:31 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:31 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity inst_mem
+# -- Compiling architecture structure of inst_mem
+# End time: 14:14:31 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:31 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity control
+# -- Compiling architecture structure of control
+# End time: 14:14:31 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:31 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity registers
+# -- Compiling architecture structure of registers
+# End time: 14:14:31 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:32 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_control
+# -- Compiling architecture structure of alu_control
+# End time: 14:14:32 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:32 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory
+# -- Compiling architecture rtl of data_memory
+# End time: 14:14:32 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:32 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shiftl_1
+# -- Compiling architecture structure of shiftl_1
+# End time: 14:14:32 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:32 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regis16
+# -- Compiling architecture structure of regis16
+# End time: 14:14:32 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:32 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regis4
+# -- Compiling architecture structure of regis4
+# End time: 14:14:32 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj1_cpu_s2_25/multplex_led_hex.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:32 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj1_cpu_s2_25/multplex_led_hex.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity multplex_led_hex
+# -- Compiling architecture structure of multplex_led_hex
+# End time: 14:14:32 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:32 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package pipeline_cpu_pkg
+# -- Compiling entity pipeline_cpu
+# -- Compiling architecture structure of pipeline_cpu
+# End time: 14:14:32 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:32 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package pipeline_cpu_pkg
+# -- Compiling entity pc
+# -- Compiling architecture structure of pc
+# End time: 14:14:33 on Dec 01,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:33 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package pipeline_cpu_pkg
+# -- Compiling entity if_id
+# -- Compiling architecture structure of if_id
+# End time: 14:14:33 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:33 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package pipeline_cpu_pkg
+# -- Compiling entity id_ex
+# -- Compiling architecture structure of id_ex
+# End time: 14:14:33 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:33 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package pipeline_cpu_pkg
+# -- Compiling entity ex_mem
+# -- Compiling architecture structure of ex_mem
+# End time: 14:14:33 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:14:33 on Dec 01,2025
+# vcom -reportprogress 300 -93 -work work C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package pipeline_cpu_pkg
+# -- Compiling entity mem_wb
+# -- Compiling architecture structure of mem_wb
+# End time: 14:14:33 on Dec 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.pipeline_cpu
+# vsim work.pipeline_cpu 
+# Start time: 14:14:44 on Dec 01,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline_cpu_pkg
+# Loading work.pipeline_cpu(structure)
+# Loading work.mux_2_1_16b(structure)
+# Loading work.pc(structure)
+# Loading work.regis16(structure)
+# Loading work.alu_16b(behavior)
+# Loading work.inst_mem(structure)
+# Loading work.if_id(structure)
+# Loading work.control(structure)
+# Loading work.registers(structure)
+# Loading work.id_ex(structure)
+# Loading work.regis4(structure)
+# Loading work.shiftl_1(structure)
+# Loading work.alu_control(structure)
+# Loading work.mux_2_1_4b(structure)
+# Loading work.ex_mem(structure)
+# Loading work.data_memory(rtl)
+# Loading work.mem_wb(structure)
+# Loading work.multplex_led_hex(structure)
+add wave -position end  sim:/pipeline_cpu/CLOCK_50
+add wave -position end  sim:/pipeline_cpu/sw
+add wave -position end  sim:/pipeline_cpu/hex0
+add wave -position end  sim:/pipeline_cpu/hex2
+add wave -position end  sim:/pipeline_cpu/hex3
+add wave -position end  sim:/pipeline_cpu/hex4
+add wave -position end  sim:/pipeline_cpu/hex5
+add wave -position end  sim:/pipeline_cpu/view_regis
+add wave -position end  sim:/pipeline_cpu/view_regis_data
+add wave -position end  sim:/pipeline_cpu/clockticks
+add wave -position end  sim:/pipeline_cpu/clock
+add wave -position end  sim:/pipeline_cpu/phase_cnt
+add wave -position end  sim:/pipeline_cpu/Global_In
+add wave -position end  sim:/pipeline_cpu/Global_Out
+add wave -position end  sim:/pipeline_cpu/PC_In
+add wave -position end  sim:/pipeline_cpu/PC_Out
+add wave -position end  sim:/pipeline_cpu/PC_2_IF
+add wave -position end  sim:/pipeline_cpu/Inst_IF
+add wave -position end  sim:/pipeline_cpu/PC_2_ID
+add wave -position end  sim:/pipeline_cpu/Inst_ID
+add wave -position end  sim:/pipeline_cpu/WB_ID
+add wave -position end  sim:/pipeline_cpu/M_ID
+add wave -position end  sim:/pipeline_cpu/EX_ID
+add wave -position end  sim:/pipeline_cpu/RS_Data_ID
+add wave -position end  sim:/pipeline_cpu/RT_Data_ID
+add wave -position end  sim:/pipeline_cpu/Offset_ID
+add wave -position end  sim:/pipeline_cpu/WB_EX
+add wave -position end  sim:/pipeline_cpu/M_EX
+add wave -position end  sim:/pipeline_cpu/RegDst
+add wave -position end  sim:/pipeline_cpu/ALUOp
+add wave -position end  sim:/pipeline_cpu/ALUSrc
+add wave -position end  sim:/pipeline_cpu/PC_2_EX
+add wave -position end  sim:/pipeline_cpu/Offset_EX
+add wave -position end  sim:/pipeline_cpu/Offset_EX_2
+add wave -position end  sim:/pipeline_cpu/PC_EX
+add wave -position end  sim:/pipeline_cpu/LIXO
+add wave -position end  sim:/pipeline_cpu/RT_Data_EX
+add wave -position end  sim:/pipeline_cpu/Src_A
+add wave -position end  sim:/pipeline_cpu/Src_B
+add wave -position end  sim:/pipeline_cpu/ALU_R_EX
+add wave -position end  sim:/pipeline_cpu/Add_Sub
+add wave -position end  sim:/pipeline_cpu/Zero_EX
+add wave -position end  sim:/pipeline_cpu/overflow_EX
+add wave -position end  sim:/pipeline_cpu/RT_EX
+add wave -position end  sim:/pipeline_cpu/RD_EX
+add wave -position end  sim:/pipeline_cpu/RW_EX
+add wave -position end  sim:/pipeline_cpu/WB_MEM
+add wave -position end  sim:/pipeline_cpu/MemWrite
+add wave -position end  sim:/pipeline_cpu/MemRead
+add wave -position end  sim:/pipeline_cpu/Branch
+add wave -position end  sim:/pipeline_cpu/Zero_MEM
+add wave -position end  sim:/pipeline_cpu/PCSrc
+add wave -position end  sim:/pipeline_cpu/PC_MEM
+add wave -position end  sim:/pipeline_cpu/ALU_R_MEM
+add wave -position end  sim:/pipeline_cpu/RT_Data_MEM
+add wave -position end  sim:/pipeline_cpu/Read_Data_MEM
+add wave -position end  sim:/pipeline_cpu/RW_MEM
+add wave -position end  sim:/pipeline_cpu/RegWrite
+add wave -position end  sim:/pipeline_cpu/MemtoReg
+add wave -position end  sim:/pipeline_cpu/Read_Data_WB
+add wave -position end  sim:/pipeline_cpu/ALU_R_WB
+add wave -position end  sim:/pipeline_cpu/Write_Data
+add wave -position end  sim:/pipeline_cpu/RW_WB
+add wave -position end  sim:/pipeline_cpu/max
+add wave -position end  sim:/pipeline_cpu/half
+add wave -position end  sim:/pipeline_cpu/N
+add wave -position end  sim:/pipeline_cpu/MAX_PHASE
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: pedro  Hostname: PD-NOTE  ProcessID: 16692
+#           Attempting to use alternate WLF file "./wlftmtniw3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmtniw3
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline_cpu/S_Registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline_cpu/S_Registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline_cpu/S_Registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline_cpu/Instruc_M
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+force -freeze sim:/pipeline_cpu/CLOCK_50 1 0, 0 {5 ps} -r 10
+force -freeze sim:/pipeline_cpu/sw 0000 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline_cpu/S_Registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline_cpu/S_Registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline_cpu/S_Registers
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline_cpu/Instruc_M
+# End time: 14:33:32 on Dec 01,2025, Elapsed time: 0:18:48
+# Errors: 0, Warnings: 4

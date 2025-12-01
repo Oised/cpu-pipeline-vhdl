@@ -3,70 +3,74 @@ use ieee.std_logic_1164.all;
 use work.pipeline_cpu_pkg.all;
 
 entity mem_wb is
-	port(
-		WB_in        : in  std_logic_vector(1 downto 0);
-		Read_Data_in : in  std_logic_vector(15 downto 0);
-		ALU_R_in     : in  std_logic_vector(15 downto 0);
-		RW_in        : in  std_logic_vector(3 downto 0);
-		clock	  	  	 : in  std_logic;
-		Global_In    : in  std_logic;
-		Global_Out   : in  std_logic;
-		RegWrite_out : out std_logic;
-		MemtoReg_out : out std_logic;
-		Read_Data_WB : out std_logic_vector(15 downto 0);
-		ALU_R_WB     : out std_logic_vector(15 downto 0);
-		RW_WB        : out std_logic_vector(3 downto 0)
-	);
+    port(
+        WB_in        : in  std_logic_vector(1 downto 0);
+        Read_Data_in : in  std_logic_vector(15 downto 0);
+        ALU_R_in     : in  std_logic_vector(15 downto 0);
+        RW_in        : in  std_logic_vector(3 downto 0);
+        clock        : in  std_logic;
+        Global_In    : in  std_logic;
+        Global_Out   : in  std_logic;
+        RegWrite_out : out std_logic;
+        MemtoReg_out : out std_logic;
+        Read_Data_WB : out std_logic_vector(15 downto 0);
+        ALU_R_WB     : out std_logic_vector(15 downto 0);
+        RW_WB        : out std_logic_vector(3 downto 0)
+    );
 end mem_wb;
 
 architecture structure of mem_wb is
 
-    --------------------------------------------------------------------
     -- sinal auxiliar
-    --------------------------------------------------------------------
     signal WB_in_aux    : std_logic_vector(3 downto 0);
 
-    --------------------------------------------------------------------
-    -- sinais "mid"
-    -- (regis4 para até 4 bits; regis16 para 16 bits)
-    --------------------------------------------------------------------
+    -- sinais "mid" (registrados)
     signal WB_mid        : std_logic_vector(3 downto 0);
     signal Read_Data_mid : std_logic_vector(15 downto 0);
     signal ALU_R_mid     : std_logic_vector(15 downto 0);
     signal RW_mid        : std_logic_vector(3 downto 0);
 
-    --------------------------------------------------------------------
-    -- sinais "aux" que entram e saem dos muxes
-    -- estes também são as saídas finais (fatiadas quando necessário)
-    --------------------------------------------------------------------
-    signal WB_out_aux        : std_logic_vector(3 downto 0);
-    signal Read_Data_WB_aux  : std_logic_vector(15 downto 0);
-    signal ALU_R_WB_aux      : std_logic_vector(15 downto 0);
-    signal RW_WB_aux         : std_logic_vector(3 downto 0);
+    -- registradores de saída (mantêm valor anterior quando Global_Out = '0')
+    signal WB_out_reg        : std_logic_vector(3 downto 0) := (others => '0');
+    signal Read_Data_WB_reg  : std_logic_vector(15 downto 0) := (others => '0');
+    signal ALU_R_WB_reg      : std_logic_vector(15 downto 0) := (others => '0');
+    signal RW_WB_reg         : std_logic_vector(3 downto 0) := (others => '0');
 
 begin
 
+    -- expand input WB para 4 bits
     WB_in_aux <= "00" & WB_in;
 
+    -- registradores "mid" (captura na fase Global_In)
+    R_WB_in     : regis4  port map (WB_in_aux,     clock, Global_In, WB_mid);
+    R_ReadData  : regis16 port map (Read_Data_in,  clock, Global_In, Read_Data_mid);
+    R_ALU_R     : regis16 port map (ALU_R_in,      clock, Global_In, ALU_R_mid);
+    R_RW        : regis4  port map (RW_in,         clock, Global_In, RW_mid);
 
-    R_WB_in : regis4 port map (WB_in_aux, clock, Global_In, WB_mid);
-    M_WB_out : mux_2_1_4b port map (WB_out_aux, WB_mid, Global_Out, WB_out_aux);
-    RegWrite_out <= WB_out_aux(0);
-    MemtoReg_out <= WB_out_aux(1);
+    -- processo que implementa o gate/hold (atualiza saídas apenas quando Global_Out='1')
+    process(clock)
+    begin
+        if rising_edge(clock) then
+            if Global_Out = '1' then
+                WB_out_reg       <= WB_mid;
+                Read_Data_WB_reg <= Read_Data_mid;
+                ALU_R_WB_reg     <= ALU_R_mid;
+                RW_WB_reg        <= RW_mid;
+            else
+                -- hold: mantém valores
+                WB_out_reg       <= WB_out_reg;
+                Read_Data_WB_reg <= Read_Data_WB_reg;
+                ALU_R_WB_reg     <= ALU_R_WB_reg;
+                RW_WB_reg        <= RW_WB_reg;
+            end if;
+        end if;
+    end process;
 
+    -- mapeamento para as portas de saída (fatiamentos conforme sua semântica original)
+    RegWrite_out <= WB_out_reg(0);
+    MemtoReg_out <= WB_out_reg(1);
+    Read_Data_WB <= Read_Data_WB_reg;
+    ALU_R_WB     <= ALU_R_WB_reg;
+    RW_WB        <= RW_WB_reg;
 
-    R_ReadData : regis16 port map (Read_Data_in, clock, Global_In, Read_Data_mid);
-    M_ReadData : mux_2_1_16b port map (Read_Data_WB_aux, Read_Data_mid, Global_Out, Read_Data_WB_aux);
-    Read_Data_WB <= Read_Data_WB_aux;
-
-
-    R_ALU_R : regis16 port map (ALU_R_in, clock, Global_In, ALU_R_mid);
-    M_ALU_R : mux_2_1_16b port map (ALU_R_WB_aux, ALU_R_mid, Global_Out, ALU_R_WB_aux);
-    ALU_R_WB <= ALU_R_WB_aux;
-
-
-    R_RW : regis4 port map (RW_in, clock, Global_In, RW_mid);
-    M_RW : mux_2_1_4b port map (RW_WB_aux, RW_mid, Global_Out, RW_WB_aux);
-    RW_WB <= RW_WB_aux;
-
-end structure;
+end architecture;

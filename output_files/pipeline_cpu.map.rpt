@@ -1,5 +1,5 @@
-Analysis & Elaboration report for pipeline_cpu
-Sat Nov 29 19:15:52 2025
+Analysis & Synthesis report for pipeline_cpu
+Mon Dec 01 14:40:59 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -7,21 +7,30 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "mem_wb:S_MEM_WB|regis4:R_WB_in"
-  6. Port Connectivity Checks: "ex_mem:S_EX_MEM|regis4:R_Zero"
-  7. Port Connectivity Checks: "ex_mem:S_EX_MEM|regis4:R_M_in"
-  8. Port Connectivity Checks: "ex_mem:S_EX_MEM|regis4:R_WB_in"
-  9. Port Connectivity Checks: "alu_16b:ALU"
- 10. Port Connectivity Checks: "alu_16b:PC_Add"
- 11. Port Connectivity Checks: "id_ex:S_ID_EX|regis4:R_EX_in"
- 12. Port Connectivity Checks: "id_ex:S_ID_EX|regis4:R_M_in"
- 13. Port Connectivity Checks: "id_ex:S_ID_EX|regis4:R_WB_in"
- 14. Port Connectivity Checks: "id_ex:S_ID_EX"
- 15. Port Connectivity Checks: "alu_16b:PC_mais_2"
- 16. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "mem_wb:S_MEM_WB|regis4:R_WB_in"
+ 13. Port Connectivity Checks: "ex_mem:S_EX_MEM|regis4:R_Zero"
+ 14. Port Connectivity Checks: "ex_mem:S_EX_MEM|regis4:R_M_in"
+ 15. Port Connectivity Checks: "ex_mem:S_EX_MEM|regis4:R_WB_in"
+ 16. Port Connectivity Checks: "alu_16b:ALU"
+ 17. Port Connectivity Checks: "alu_16b:PC_Add"
+ 18. Port Connectivity Checks: "id_ex:S_ID_EX|regis4:R_EX_in"
+ 19. Port Connectivity Checks: "id_ex:S_ID_EX|regis4:R_M_in"
+ 20. Port Connectivity Checks: "id_ex:S_ID_EX|regis4:R_WB_in"
+ 21. Port Connectivity Checks: "id_ex:S_ID_EX"
+ 22. Port Connectivity Checks: "alu_16b:PC_mais_2"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
 
 
 
@@ -46,43 +55,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sat Nov 29 19:15:52 2025       ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 01 14:40:59 2025       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; pipeline_cpu                                ;
 ; Top-level Entity Name              ; pipeline_cpu                                ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 612                                         ;
+;     Total combinational functions  ; 347                                         ;
+;     Dedicated logic registers      ; 359                                         ;
+; Total registers                    ; 359                                         ;
+; Total pins                         ; 40                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -167,40 +160,703 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------------------------+
-; Port Connectivity Checks: "mem_wb:S_MEM_WB|regis4:R_WB_in" ;
-+------------+-------+----------+----------------------------+
-; Port       ; Type  ; Severity ; Details                    ;
-+------------+-------+----------+----------------------------+
-; data[3..2] ; Input ; Info     ; Stuck at GND               ;
-+------------+-------+----------+----------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-8         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "ex_mem:S_EX_MEM|regis4:R_Zero" ;
-+------------+-------+----------+---------------------------+
-; Port       ; Type  ; Severity ; Details                   ;
-+------------+-------+----------+---------------------------+
-; data[3..1] ; Input ; Info     ; Stuck at GND              ;
-+------------+-------+----------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                             ;
++-----------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path              ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                         ; Library ;
++-----------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; pipeline_cpu.vhd                              ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd     ;         ;
+; pipeline_cpu_pkg.vhd                          ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu_pkg.vhd ;         ;
+; mux_2_1_16b.vhd                               ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_16b.vhd      ;         ;
+; mux_2_1_4b.vhd                                ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mux_2_1_4b.vhd       ;         ;
+; pc.vhd                                        ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd               ;         ;
+; alu_16b.vhd                                   ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_16b.vhd          ;         ;
+; inst_mem.vhd                                  ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd         ;         ;
+; if_id.vhd                                     ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/if_id.vhd            ;         ;
+; control.vhd                                   ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/control.vhd          ;         ;
+; registers.vhd                                 ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/registers.vhd        ;         ;
+; id_ex.vhd                                     ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd            ;         ;
+; alu_control.vhd                               ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/alu_control.vhd      ;         ;
+; ex_mem.vhd                                    ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd           ;         ;
+; data_memory.vhd                               ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd      ;         ;
+; mem_wb.vhd                                    ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd           ;         ;
+; shiftl_1.vhd                                  ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/shiftl_1.vhd         ;         ;
+; regis16.vhd                                   ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis16.vhd          ;         ;
+; regis4.vhd                                    ; yes             ; User VHDL File  ; C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/regis4.vhd           ;         ;
+; ../../../proj1_cpu_s2_25/multplex_led_hex.vhd ; yes             ; User VHDL File  ; C:/quartus directory/proj1_cpu_s2_25/multplex_led_hex.vhd                            ;         ;
++-----------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "ex_mem:S_EX_MEM|regis4:R_M_in" ;
-+------------+-------+----------+---------------------------+
-; Port       ; Type  ; Severity ; Details                   ;
-+------------+-------+----------+---------------------------+
-; data[3..2] ; Input ; Info     ; Stuck at GND              ;
-+------------+-------+----------+---------------------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 612   ;
+;                                             ;       ;
+; Total combinational functions               ; 347   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 248   ;
+;     -- 3 input functions                    ; 39    ;
+;     -- <=2 input functions                  ; 60    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 325   ;
+;     -- arithmetic mode                      ; 22    ;
+;                                             ;       ;
+; Total registers                             ; 359   ;
+;     -- Dedicated logic registers            ; 359   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 40    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clock ;
+; Maximum fan-out                             ; 345   ;
+; Total fan-out                               ; 2364  ;
+; Average fan-out                             ; 3.01  ;
++---------------------------------------------+-------+
 
 
-+------------------------------------------------------------+
-; Port Connectivity Checks: "ex_mem:S_EX_MEM|regis4:R_WB_in" ;
-+------------+-------+----------+----------------------------+
-; Port       ; Type  ; Severity ; Details                    ;
-+------------+-------+----------+----------------------------+
-; data[3..2] ; Input ; Info     ; Stuck at GND               ;
-+------------+-------+----------+----------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                              ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name      ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+------------------+--------------+
+; |pipeline_cpu                    ; 347 (26)            ; 359 (18)                  ; 0           ; 0            ; 0       ; 0         ; 40   ; 0            ; |pipeline_cpu                                    ; pipeline_cpu     ; work         ;
+;    |alu_16b:ALU|                 ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|alu_16b:ALU                        ; alu_16b          ; work         ;
+;    |alu_16b:PC_mais_2|           ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|alu_16b:PC_mais_2                  ; alu_16b          ; work         ;
+;    |alu_control:ALUControl|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|alu_control:ALUControl             ; alu_control      ; work         ;
+;    |data_memory:Data_Mem|        ; 10 (10)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|data_memory:Data_Mem               ; data_memory      ; work         ;
+;    |ex_mem:S_EX_MEM|             ; 0 (0)               ; 42 (21)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|ex_mem:S_EX_MEM                    ; ex_mem           ; work         ;
+;       |regis16:R_ALU_R|          ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|ex_mem:S_EX_MEM|regis16:R_ALU_R    ; regis16          ; work         ;
+;       |regis4:R_M_in|            ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|ex_mem:S_EX_MEM|regis4:R_M_in      ; regis4           ; work         ;
+;       |regis4:R_RW|              ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|ex_mem:S_EX_MEM|regis4:R_RW        ; regis4           ; work         ;
+;       |regis4:R_WB_in|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|ex_mem:S_EX_MEM|regis4:R_WB_in     ; regis4           ; work         ;
+;    |id_ex:S_ID_EX|               ; 1 (0)               ; 76 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|id_ex:S_ID_EX                      ; id_ex            ; work         ;
+;       |regis16:R_RS|             ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|id_ex:S_ID_EX|regis16:R_RS         ; regis16          ; work         ;
+;       |regis16:R_RT|             ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|id_ex:S_ID_EX|regis16:R_RT         ; regis16          ; work         ;
+;       |regis4:R_EX_in|           ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|id_ex:S_ID_EX|regis4:R_EX_in       ; regis4           ; work         ;
+;       |regis4:R_RD_ID|           ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|id_ex:S_ID_EX|regis4:R_RD_ID       ; regis4           ; work         ;
+;       |regis4:R_RT_ID|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|id_ex:S_ID_EX|regis4:R_RT_ID       ; regis4           ; work         ;
+;       |regis4:R_WB_in|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|id_ex:S_ID_EX|regis4:R_WB_in       ; regis4           ; work         ;
+;    |if_id:S_IF_ID|               ; 0 (0)               ; 8 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|if_id:S_IF_ID                      ; if_id            ; work         ;
+;       |regis16:R_Inst_IF|        ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|if_id:S_IF_ID|regis16:R_Inst_IF    ; regis16          ; work         ;
+;    |inst_mem:Instruc_M|          ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|inst_mem:Instruc_M                 ; inst_mem         ; work         ;
+;    |mem_wb:S_MEM_WB|             ; 0 (0)               ; 52 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|mem_wb:S_MEM_WB                    ; mem_wb           ; work         ;
+;       |regis16:R_ALU_R|          ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|mem_wb:S_MEM_WB|regis16:R_ALU_R    ; regis16          ; work         ;
+;       |regis16:R_ReadData|       ; 0 (0)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|mem_wb:S_MEM_WB|regis16:R_ReadData ; regis16          ; work         ;
+;       |regis4:R_RW|              ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|mem_wb:S_MEM_WB|regis4:R_RW        ; regis4           ; work         ;
+;       |regis4:R_WB_in|           ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|mem_wb:S_MEM_WB|regis4:R_WB_in     ; regis4           ; work         ;
+;    |multplex_led_hex:Led_1_de_4| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|multplex_led_hex:Led_1_de_4        ; multplex_led_hex ; work         ;
+;    |multplex_led_hex:Led_2_de_4| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|multplex_led_hex:Led_2_de_4        ; multplex_led_hex ; work         ;
+;    |multplex_led_hex:Led_3_de_4| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|multplex_led_hex:Led_3_de_4        ; multplex_led_hex ; work         ;
+;    |multplex_led_hex:Led_4_de_4| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|multplex_led_hex:Led_4_de_4        ; multplex_led_hex ; work         ;
+;    |multplex_led_hex:Led_Reg_n|  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|multplex_led_hex:Led_Reg_n         ; multplex_led_hex ; work         ;
+;    |mux_2_1_16b:Mux_2_1_EX_1|    ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|mux_2_1_16b:Mux_2_1_EX_1           ; mux_2_1_16b      ; work         ;
+;    |mux_2_1_16b:Mux_2_1_WB|      ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|mux_2_1_16b:Mux_2_1_WB             ; mux_2_1_16b      ; work         ;
+;    |mux_2_1_4b:Mux_2_1_EX_2|     ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|mux_2_1_4b:Mux_2_1_EX_2            ; mux_2_1_4b       ; work         ;
+;    |pc:PC_IF|                    ; 1 (0)               ; 30 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|pc:PC_IF                           ; pc               ; work         ;
+;       |regis16:R_PC_in|          ; 1 (1)               ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|pc:PC_IF|regis16:R_PC_in           ; regis16          ; work         ;
+;    |registers:S_Registers|       ; 168 (168)           ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pipeline_cpu|registers:S_Registers              ; registers        ; work         ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++--------------------------------------------------+--------------------------------------------------+
+; Register name                                    ; Reason for Removal                               ;
++--------------------------------------------------+--------------------------------------------------+
+; ex_mem:S_EX_MEM|regis4:R_M_in|R[2]               ; Stuck at GND due to stuck port data_in           ;
+; id_ex:S_ID_EX|regis16:R_Off|R[13..15]            ; Stuck at GND due to stuck port data_in           ;
+; ex_mem:S_EX_MEM|M_out_reg[2]                     ; Stuck at GND due to stuck port data_in           ;
+; id_ex:S_ID_EX|Offset_EX_reg[13..15]              ; Stuck at GND due to stuck port data_in           ;
+; ex_mem:S_EX_MEM|Zero_out_reg[0]                  ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis4:R_Zero|R[0]               ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[15]                   ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[15]            ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[15]                    ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[15]                 ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[15]                    ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[15]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[14]                   ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[14]            ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[14]                    ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[14]                 ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[14]                    ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[14]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[13]                   ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[13]            ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[13]                    ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[13]                 ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[13]                    ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[13]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[12]                   ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[12]            ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[12]                    ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[12]                 ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[12]                    ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[12]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[11]                   ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[11]            ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[11]                    ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[11]                 ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[11]                    ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[11]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[10]                   ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[10]            ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[10]                    ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[10]                 ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[10]                    ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[10]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[9]                    ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[9]             ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[9]                     ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[9]                  ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[9]                     ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[9]             ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[8]                    ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[8]             ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[8]                     ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[8]                  ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[8]                     ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[8]             ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[7]                    ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[7]             ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[7]                     ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[7]                  ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[7]                     ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[7]             ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[6]                    ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[6]             ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[6]                     ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[6]                  ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[6]                     ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[6]             ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[5]                    ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[5]             ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[5]                     ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[5]                  ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[5]                     ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[5]             ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[4]                    ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[4]             ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[4]                     ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[4]                  ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[4]                     ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[4]             ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[3]                    ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[3]             ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[3]                     ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[3]                  ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[3]                     ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[3]             ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[2]                    ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[2]             ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[2]                     ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[2]                  ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[2]                     ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[2]             ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[1]                    ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[1]             ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[1]                     ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[1]                  ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[1]                     ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[1]             ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|PC_MEM_reg[0]                    ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[0]             ; Lost fanout                                      ;
+; id_ex:S_ID_EX|PC_2_EX_reg[0]                     ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_PC|R[0]                  ; Lost fanout                                      ;
+; if_id:S_IF_ID|PC_2_ID_reg[0]                     ; Lost fanout                                      ;
+; if_id:S_IF_ID|regis16:R_PC_2_IF|R[0]             ; Lost fanout                                      ;
+; id_ex:S_ID_EX|regis16:R_Off|R[1]                 ; Merged with id_ex:S_ID_EX|regis4:R_RD_ID|R[0]    ;
+; id_ex:S_ID_EX|regis16:R_Off|R[2]                 ; Merged with id_ex:S_ID_EX|regis4:R_RD_ID|R[1]    ;
+; id_ex:S_ID_EX|regis16:R_Off|R[3]                 ; Merged with id_ex:S_ID_EX|regis4:R_RD_ID|R[2]    ;
+; id_ex:S_ID_EX|regis16:R_Off|R[4]                 ; Merged with id_ex:S_ID_EX|regis4:R_RD_ID|R[3]    ;
+; id_ex:S_ID_EX|regis16:R_Off|R[9]                 ; Merged with id_ex:S_ID_EX|regis4:R_RT_ID|R[0]    ;
+; id_ex:S_ID_EX|regis16:R_Off|R[10]                ; Merged with id_ex:S_ID_EX|regis4:R_RT_ID|R[1]    ;
+; id_ex:S_ID_EX|regis16:R_Off|R[11]                ; Merged with id_ex:S_ID_EX|regis4:R_RT_ID|R[2]    ;
+; id_ex:S_ID_EX|regis16:R_Off|R[12]                ; Merged with id_ex:S_ID_EX|regis4:R_RT_ID|R[3]    ;
+; id_ex:S_ID_EX|Offset_EX_reg[9]                   ; Merged with id_ex:S_ID_EX|RT_EX_reg[0]           ;
+; id_ex:S_ID_EX|Offset_EX_reg[4]                   ; Merged with id_ex:S_ID_EX|RD_EX_reg[3]           ;
+; id_ex:S_ID_EX|Offset_EX_reg[3]                   ; Merged with id_ex:S_ID_EX|RD_EX_reg[2]           ;
+; id_ex:S_ID_EX|Offset_EX_reg[2]                   ; Merged with id_ex:S_ID_EX|RD_EX_reg[1]           ;
+; id_ex:S_ID_EX|Offset_EX_reg[1]                   ; Merged with id_ex:S_ID_EX|RD_EX_reg[0]           ;
+; id_ex:S_ID_EX|Offset_EX_reg[10]                  ; Merged with id_ex:S_ID_EX|RT_EX_reg[1]           ;
+; id_ex:S_ID_EX|Offset_EX_reg[11]                  ; Merged with id_ex:S_ID_EX|RT_EX_reg[2]           ;
+; id_ex:S_ID_EX|Offset_EX_reg[12]                  ; Merged with id_ex:S_ID_EX|RT_EX_reg[3]           ;
+; ex_mem:S_EX_MEM|WB_out_reg[0]                    ; Merged with ex_mem:S_EX_MEM|M_out_reg[1]         ;
+; ex_mem:S_EX_MEM|regis4:R_WB_in|R[0]              ; Merged with ex_mem:S_EX_MEM|regis4:R_M_in|R[1]   ;
+; id_ex:S_ID_EX|regis4:R_WB_in|R[0]                ; Merged with id_ex:S_ID_EX|regis4:R_M_in|R[1]     ;
+; id_ex:S_ID_EX|WB_out_reg[0]                      ; Merged with id_ex:S_ID_EX|M_out_reg[1]           ;
+; pc:PC_IF|regis16:R_PC_in|R[0]                    ; Stuck at GND due to stuck port data_in           ;
+; pc:PC_IF|PC_out_reg[0]                           ; Stuck at GND due to stuck port data_in           ;
+; if_id:S_IF_ID|regis16:R_Inst_IF|R[3..8,12,14,15] ; Stuck at GND due to stuck port data_in           ;
+; if_id:S_IF_ID|Inst_ID_reg[3..8,12,14,15]         ; Stuck at GND due to stuck port data_in           ;
+; id_ex:S_ID_EX|regis4:R_RD_ID|R[2,3]              ; Stuck at GND due to stuck port data_in           ;
+; id_ex:S_ID_EX|regis4:R_RT_ID|R[3]                ; Stuck at GND due to stuck port data_in           ;
+; id_ex:S_ID_EX|regis16:R_Off|R[5..8]              ; Stuck at GND due to stuck port data_in           ;
+; id_ex:S_ID_EX|RD_EX_reg[2,3]                     ; Stuck at GND due to stuck port data_in           ;
+; id_ex:S_ID_EX|RT_EX_reg[3]                       ; Stuck at GND due to stuck port data_in           ;
+; id_ex:S_ID_EX|Offset_EX_reg[5..8]                ; Stuck at GND due to stuck port data_in           ;
+; ex_mem:S_EX_MEM|regis4:R_RW|R[3]                 ; Stuck at GND due to stuck port data_in           ;
+; ex_mem:S_EX_MEM|RW_MEM_reg[3]                    ; Stuck at GND due to stuck port data_in           ;
+; mem_wb:S_MEM_WB|regis4:R_RW|R[3]                 ; Stuck at GND due to stuck port data_in           ;
+; mem_wb:S_MEM_WB|RW_WB_reg[3]                     ; Stuck at GND due to stuck port data_in           ;
+; registers:S_Registers|regs[15][0]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[15][1]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[15][2]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[15][3]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[15][4]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[15][5]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[15][6]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[15][7]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[15][8]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[15][9]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[15][10]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[15][11]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[15][12]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[15][13]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[15][14]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[15][15]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][0]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][1]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][2]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][3]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][4]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][5]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][6]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][7]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][8]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][9]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][10]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][11]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][12]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][13]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][14]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[14][15]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][0]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][1]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][2]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][3]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][4]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][5]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][6]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][7]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][8]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][9]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][10]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][11]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][12]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][13]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][14]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[13][15]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][0]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][1]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][2]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][3]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][4]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][5]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][6]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][7]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][8]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][9]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][10]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][11]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][12]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][13]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][14]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[12][15]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][0]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][1]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][2]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][3]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][4]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][5]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][6]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][7]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][8]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][9]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][10]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][11]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][12]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][13]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][14]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[11][15]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][0]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][1]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][2]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][3]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][4]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][5]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][6]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][7]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][8]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][9]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][10]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][11]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][12]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][13]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][14]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[10][15]               ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][0]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][1]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][2]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][3]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][4]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][5]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][6]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][7]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][8]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][9]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][10]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][11]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][12]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][13]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][14]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[9][15]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][0]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][1]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][2]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][3]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][4]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][5]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][6]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][7]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][8]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][9]                 ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][10]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][11]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][12]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][13]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][14]                ; Stuck at GND due to stuck port clock_enable      ;
+; registers:S_Registers|regs[8][15]                ; Stuck at GND due to stuck port clock_enable      ;
+; id_ex:S_ID_EX|regis4:R_M_in|R[0]                 ; Stuck at GND due to stuck port data_in           ;
+; id_ex:S_ID_EX|M_out_reg[0]                       ; Stuck at GND due to stuck port data_in           ;
+; ex_mem:S_EX_MEM|regis4:R_M_in|R[0]               ; Stuck at GND due to stuck port data_in           ;
+; ex_mem:S_EX_MEM|M_out_reg[0]                     ; Stuck at GND due to stuck port data_in           ;
+; id_ex:S_ID_EX|regis4:R_M_in|R[1]                 ; Merged with id_ex:S_ID_EX|regis4:R_EX_in|R[0]    ;
+; id_ex:S_ID_EX|regis4:R_EX_in|R[2]                ; Merged with id_ex:S_ID_EX|regis4:R_EX_in|R[1]    ;
+; if_id:S_IF_ID|regis16:R_Inst_IF|R[9]             ; Merged with if_id:S_IF_ID|regis16:R_Inst_IF|R[0] ;
+; if_id:S_IF_ID|regis16:R_Inst_IF|R[10]            ; Merged with if_id:S_IF_ID|regis16:R_Inst_IF|R[1] ;
+; if_id:S_IF_ID|regis16:R_Inst_IF|R[11]            ; Merged with if_id:S_IF_ID|regis16:R_Inst_IF|R[2] ;
+; id_ex:S_ID_EX|M_out_reg[1]                       ; Merged with id_ex:S_ID_EX|EX_out_reg[0]          ;
+; id_ex:S_ID_EX|EX_out_reg[2]                      ; Merged with id_ex:S_ID_EX|EX_out_reg[1]          ;
+; if_id:S_IF_ID|Inst_ID_reg[9]                     ; Merged with if_id:S_IF_ID|Inst_ID_reg[0]         ;
+; if_id:S_IF_ID|Inst_ID_reg[10]                    ; Merged with if_id:S_IF_ID|Inst_ID_reg[1]         ;
+; if_id:S_IF_ID|Inst_ID_reg[11]                    ; Merged with if_id:S_IF_ID|Inst_ID_reg[2]         ;
+; id_ex:S_ID_EX|regis4:R_RT_ID|R[1]                ; Merged with id_ex:S_ID_EX|regis4:R_RD_ID|R[0]    ;
+; id_ex:S_ID_EX|regis4:R_RT_ID|R[2]                ; Merged with id_ex:S_ID_EX|regis4:R_RD_ID|R[1]    ;
+; id_ex:S_ID_EX|regis16:R_Off|R[0]                 ; Merged with id_ex:S_ID_EX|regis4:R_RT_ID|R[0]    ;
+; id_ex:S_ID_EX|Offset_EX_reg[0]                   ; Merged with id_ex:S_ID_EX|RT_EX_reg[0]           ;
+; id_ex:S_ID_EX|RT_EX_reg[2]                       ; Merged with id_ex:S_ID_EX|RD_EX_reg[1]           ;
+; id_ex:S_ID_EX|RT_EX_reg[1]                       ; Merged with id_ex:S_ID_EX|RD_EX_reg[0]           ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[0]               ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[0]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[1]               ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[1]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[2]               ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[2]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[3]               ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[3]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[4]               ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[4]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[5]               ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[5]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[6]               ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[6]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[7]               ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[7]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[8]               ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[8]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[9]               ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[9]            ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[10]              ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[10]           ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[11]              ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[11]           ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[12]              ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[12]           ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[13]              ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[13]           ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[14]              ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[14]           ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[15]              ; Lost fanout                                      ;
+; ex_mem:S_EX_MEM|regis16:R_RTData|R[15]           ; Lost fanout                                      ;
+; data_memory:Data_Mem|read_reg[5..15]             ; Stuck at GND due to stuck port data_in           ;
+; mem_wb:S_MEM_WB|regis16:R_ReadData|R[5..15]      ; Stuck at GND due to stuck port data_in           ;
+; mem_wb:S_MEM_WB|Read_Data_WB_reg[5..15]          ; Stuck at GND due to stuck port data_in           ;
+; Total Number of Removed Registers = 377          ;                                                  ;
++--------------------------------------------------+--------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                           ;
++-------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Register name                       ; Reason for Removal        ; Registers Removed due to This Register                                              ;
++-------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; ex_mem:S_EX_MEM|regis4:R_M_in|R[2]  ; Stuck at GND              ; ex_mem:S_EX_MEM|M_out_reg[2], ex_mem:S_EX_MEM|Zero_out_reg[0],                      ;
+;                                     ; due to stuck port data_in ; ex_mem:S_EX_MEM|regis4:R_Zero|R[0], ex_mem:S_EX_MEM|PC_MEM_reg[15],                 ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[15], ex_mem:S_EX_MEM|PC_MEM_reg[14],              ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[14], ex_mem:S_EX_MEM|PC_MEM_reg[13],              ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[13], ex_mem:S_EX_MEM|PC_MEM_reg[12],              ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[12], id_ex:S_ID_EX|PC_2_EX_reg[12],               ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_PC|R[12], if_id:S_IF_ID|PC_2_ID_reg[12],                    ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[12], ex_mem:S_EX_MEM|PC_MEM_reg[11],              ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[11], id_ex:S_ID_EX|PC_2_EX_reg[11],               ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_PC|R[11], if_id:S_IF_ID|PC_2_ID_reg[11],                    ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[11], ex_mem:S_EX_MEM|PC_MEM_reg[10],              ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[10], id_ex:S_ID_EX|PC_2_EX_reg[10],               ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_PC|R[10], if_id:S_IF_ID|PC_2_ID_reg[10],                    ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[10], ex_mem:S_EX_MEM|PC_MEM_reg[9],               ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[9], id_ex:S_ID_EX|PC_2_EX_reg[9],                 ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_PC|R[9], if_id:S_IF_ID|PC_2_ID_reg[9],                      ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[9], ex_mem:S_EX_MEM|PC_MEM_reg[8],                ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[8], id_ex:S_ID_EX|PC_2_EX_reg[8],                 ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_PC|R[8], if_id:S_IF_ID|PC_2_ID_reg[8],                      ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[8], ex_mem:S_EX_MEM|PC_MEM_reg[7],                ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[7], id_ex:S_ID_EX|PC_2_EX_reg[7],                 ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_PC|R[7], if_id:S_IF_ID|PC_2_ID_reg[7],                      ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[7], ex_mem:S_EX_MEM|PC_MEM_reg[6],                ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[6], id_ex:S_ID_EX|PC_2_EX_reg[6],                 ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_PC|R[6], if_id:S_IF_ID|PC_2_ID_reg[6],                      ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[6], ex_mem:S_EX_MEM|PC_MEM_reg[5],                ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[5], id_ex:S_ID_EX|PC_2_EX_reg[5],                 ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_PC|R[5], if_id:S_IF_ID|PC_2_ID_reg[5],                      ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[5], ex_mem:S_EX_MEM|PC_MEM_reg[4],                ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[4], id_ex:S_ID_EX|PC_2_EX_reg[4],                 ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_PC|R[4], if_id:S_IF_ID|PC_2_ID_reg[4],                      ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[4], ex_mem:S_EX_MEM|PC_MEM_reg[3],                ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[3], id_ex:S_ID_EX|PC_2_EX_reg[3],                 ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_PC|R[3], if_id:S_IF_ID|PC_2_ID_reg[3],                      ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[3], ex_mem:S_EX_MEM|PC_MEM_reg[2],                ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[2], id_ex:S_ID_EX|PC_2_EX_reg[2],                 ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_PC|R[2], if_id:S_IF_ID|PC_2_ID_reg[2],                      ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[2], ex_mem:S_EX_MEM|PC_MEM_reg[1],                ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[1], id_ex:S_ID_EX|PC_2_EX_reg[1],                 ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_PC|R[1], if_id:S_IF_ID|PC_2_ID_reg[1],                      ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[1], ex_mem:S_EX_MEM|PC_MEM_reg[0],                ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis16:R_PC_EX|R[0], id_ex:S_ID_EX|PC_2_EX_reg[0],                 ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_PC|R[0], if_id:S_IF_ID|PC_2_ID_reg[0],                      ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[0], pc:PC_IF|regis16:R_PC_in|R[0],                ;
+;                                     ;                           ; pc:PC_IF|PC_out_reg[0], if_id:S_IF_ID|regis16:R_Inst_IF|R[3],                       ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_Inst_IF|R[4], if_id:S_IF_ID|regis16:R_Inst_IF|R[5],         ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_Inst_IF|R[6], if_id:S_IF_ID|regis16:R_Inst_IF|R[7],         ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_Inst_IF|R[8], if_id:S_IF_ID|regis16:R_Inst_IF|R[12],        ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_Inst_IF|R[14], if_id:S_IF_ID|regis16:R_Inst_IF|R[15],       ;
+;                                     ;                           ; if_id:S_IF_ID|Inst_ID_reg[3], if_id:S_IF_ID|Inst_ID_reg[4],                         ;
+;                                     ;                           ; if_id:S_IF_ID|Inst_ID_reg[5], if_id:S_IF_ID|Inst_ID_reg[6],                         ;
+;                                     ;                           ; if_id:S_IF_ID|Inst_ID_reg[7], if_id:S_IF_ID|Inst_ID_reg[8],                         ;
+;                                     ;                           ; if_id:S_IF_ID|Inst_ID_reg[12], if_id:S_IF_ID|Inst_ID_reg[14],                       ;
+;                                     ;                           ; if_id:S_IF_ID|Inst_ID_reg[15], id_ex:S_ID_EX|regis4:R_RD_ID|R[2],                   ;
+;                                     ;                           ; id_ex:S_ID_EX|regis4:R_RD_ID|R[3], id_ex:S_ID_EX|regis4:R_RT_ID|R[3],               ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_Off|R[5], id_ex:S_ID_EX|regis16:R_Off|R[6],                 ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_Off|R[7], id_ex:S_ID_EX|regis16:R_Off|R[8],                 ;
+;                                     ;                           ; id_ex:S_ID_EX|RD_EX_reg[3], id_ex:S_ID_EX|RD_EX_reg[2], id_ex:S_ID_EX|RT_EX_reg[3], ;
+;                                     ;                           ; id_ex:S_ID_EX|Offset_EX_reg[5], id_ex:S_ID_EX|Offset_EX_reg[6],                     ;
+;                                     ;                           ; id_ex:S_ID_EX|Offset_EX_reg[7], id_ex:S_ID_EX|Offset_EX_reg[8],                     ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis4:R_RW|R[3], ex_mem:S_EX_MEM|RW_MEM_reg[3],                    ;
+;                                     ;                           ; mem_wb:S_MEM_WB|regis4:R_RW|R[3], mem_wb:S_MEM_WB|RW_WB_reg[3],                     ;
+;                                     ;                           ; registers:S_Registers|regs[15][0], registers:S_Registers|regs[15][1],               ;
+;                                     ;                           ; registers:S_Registers|regs[15][2], registers:S_Registers|regs[15][3],               ;
+;                                     ;                           ; registers:S_Registers|regs[15][4], registers:S_Registers|regs[15][5],               ;
+;                                     ;                           ; registers:S_Registers|regs[15][6], registers:S_Registers|regs[15][7],               ;
+;                                     ;                           ; registers:S_Registers|regs[15][8], registers:S_Registers|regs[15][9],               ;
+;                                     ;                           ; registers:S_Registers|regs[15][10], registers:S_Registers|regs[15][11],             ;
+;                                     ;                           ; registers:S_Registers|regs[15][12], registers:S_Registers|regs[15][13],             ;
+;                                     ;                           ; registers:S_Registers|regs[15][14], registers:S_Registers|regs[15][15],             ;
+;                                     ;                           ; registers:S_Registers|regs[14][0], registers:S_Registers|regs[14][1],               ;
+;                                     ;                           ; registers:S_Registers|regs[14][2], registers:S_Registers|regs[14][3],               ;
+;                                     ;                           ; registers:S_Registers|regs[14][4], registers:S_Registers|regs[14][5],               ;
+;                                     ;                           ; registers:S_Registers|regs[14][6], registers:S_Registers|regs[14][7],               ;
+;                                     ;                           ; registers:S_Registers|regs[14][8], registers:S_Registers|regs[14][9],               ;
+;                                     ;                           ; registers:S_Registers|regs[14][10], registers:S_Registers|regs[14][11],             ;
+;                                     ;                           ; registers:S_Registers|regs[14][12], registers:S_Registers|regs[14][13],             ;
+;                                     ;                           ; registers:S_Registers|regs[14][14], registers:S_Registers|regs[14][15],             ;
+;                                     ;                           ; registers:S_Registers|regs[13][0], registers:S_Registers|regs[13][1],               ;
+;                                     ;                           ; registers:S_Registers|regs[13][2], registers:S_Registers|regs[13][3],               ;
+;                                     ;                           ; registers:S_Registers|regs[13][4], registers:S_Registers|regs[13][5],               ;
+;                                     ;                           ; registers:S_Registers|regs[13][6], registers:S_Registers|regs[13][7],               ;
+;                                     ;                           ; registers:S_Registers|regs[13][8], registers:S_Registers|regs[13][9],               ;
+;                                     ;                           ; registers:S_Registers|regs[13][10], registers:S_Registers|regs[13][11],             ;
+;                                     ;                           ; registers:S_Registers|regs[13][12], registers:S_Registers|regs[13][13],             ;
+;                                     ;                           ; registers:S_Registers|regs[13][14], registers:S_Registers|regs[13][15],             ;
+;                                     ;                           ; registers:S_Registers|regs[12][0], registers:S_Registers|regs[12][1],               ;
+;                                     ;                           ; registers:S_Registers|regs[12][2], registers:S_Registers|regs[12][3],               ;
+;                                     ;                           ; registers:S_Registers|regs[12][4], registers:S_Registers|regs[12][5],               ;
+;                                     ;                           ; registers:S_Registers|regs[12][6], registers:S_Registers|regs[12][7],               ;
+;                                     ;                           ; registers:S_Registers|regs[12][8], registers:S_Registers|regs[12][9],               ;
+;                                     ;                           ; registers:S_Registers|regs[12][10], registers:S_Registers|regs[12][11],             ;
+;                                     ;                           ; registers:S_Registers|regs[12][12], registers:S_Registers|regs[12][13],             ;
+;                                     ;                           ; registers:S_Registers|regs[12][14], registers:S_Registers|regs[12][15],             ;
+;                                     ;                           ; registers:S_Registers|regs[11][0], registers:S_Registers|regs[11][1],               ;
+;                                     ;                           ; registers:S_Registers|regs[11][2], registers:S_Registers|regs[11][3],               ;
+;                                     ;                           ; registers:S_Registers|regs[11][4], registers:S_Registers|regs[11][5],               ;
+;                                     ;                           ; registers:S_Registers|regs[11][6], registers:S_Registers|regs[11][7],               ;
+;                                     ;                           ; registers:S_Registers|regs[11][8], registers:S_Registers|regs[11][9],               ;
+;                                     ;                           ; registers:S_Registers|regs[11][10], registers:S_Registers|regs[11][11],             ;
+;                                     ;                           ; registers:S_Registers|regs[11][12], registers:S_Registers|regs[11][13],             ;
+;                                     ;                           ; registers:S_Registers|regs[11][14], registers:S_Registers|regs[11][15],             ;
+;                                     ;                           ; registers:S_Registers|regs[10][0], registers:S_Registers|regs[10][1],               ;
+;                                     ;                           ; registers:S_Registers|regs[10][2], registers:S_Registers|regs[10][3],               ;
+;                                     ;                           ; registers:S_Registers|regs[10][4], registers:S_Registers|regs[10][5],               ;
+;                                     ;                           ; registers:S_Registers|regs[10][6], registers:S_Registers|regs[10][7],               ;
+;                                     ;                           ; registers:S_Registers|regs[10][8], registers:S_Registers|regs[10][9],               ;
+;                                     ;                           ; registers:S_Registers|regs[10][10], registers:S_Registers|regs[10][11],             ;
+;                                     ;                           ; registers:S_Registers|regs[10][12], registers:S_Registers|regs[10][13],             ;
+;                                     ;                           ; registers:S_Registers|regs[10][14], registers:S_Registers|regs[10][15],             ;
+;                                     ;                           ; registers:S_Registers|regs[9][0], registers:S_Registers|regs[9][1],                 ;
+;                                     ;                           ; registers:S_Registers|regs[9][2], registers:S_Registers|regs[9][3],                 ;
+;                                     ;                           ; registers:S_Registers|regs[9][4], registers:S_Registers|regs[9][5],                 ;
+;                                     ;                           ; registers:S_Registers|regs[9][6], registers:S_Registers|regs[9][7],                 ;
+;                                     ;                           ; registers:S_Registers|regs[9][8], registers:S_Registers|regs[9][9],                 ;
+;                                     ;                           ; registers:S_Registers|regs[9][10], registers:S_Registers|regs[9][11],               ;
+;                                     ;                           ; registers:S_Registers|regs[9][12], registers:S_Registers|regs[9][13],               ;
+;                                     ;                           ; registers:S_Registers|regs[9][14], registers:S_Registers|regs[9][15],               ;
+;                                     ;                           ; registers:S_Registers|regs[8][0], registers:S_Registers|regs[8][1],                 ;
+;                                     ;                           ; registers:S_Registers|regs[8][2], registers:S_Registers|regs[8][3],                 ;
+;                                     ;                           ; registers:S_Registers|regs[8][4], registers:S_Registers|regs[8][5],                 ;
+;                                     ;                           ; registers:S_Registers|regs[8][6], registers:S_Registers|regs[8][7],                 ;
+;                                     ;                           ; registers:S_Registers|regs[8][8], registers:S_Registers|regs[8][9],                 ;
+;                                     ;                           ; registers:S_Registers|regs[8][10], registers:S_Registers|regs[8][11],               ;
+;                                     ;                           ; registers:S_Registers|regs[8][12], registers:S_Registers|regs[8][13],               ;
+;                                     ;                           ; registers:S_Registers|regs[8][14], registers:S_Registers|regs[8][15],               ;
+;                                     ;                           ; id_ex:S_ID_EX|regis4:R_M_in|R[0], id_ex:S_ID_EX|M_out_reg[0],                       ;
+;                                     ;                           ; ex_mem:S_EX_MEM|regis4:R_M_in|R[0], ex_mem:S_EX_MEM|M_out_reg[0],                   ;
+;                                     ;                           ; ex_mem:S_EX_MEM|RT_Data_MEM_reg[0], ex_mem:S_EX_MEM|regis16:R_RTData|R[0],          ;
+;                                     ;                           ; ex_mem:S_EX_MEM|RT_Data_MEM_reg[1], ex_mem:S_EX_MEM|regis16:R_RTData|R[1],          ;
+;                                     ;                           ; ex_mem:S_EX_MEM|RT_Data_MEM_reg[2], ex_mem:S_EX_MEM|regis16:R_RTData|R[2],          ;
+;                                     ;                           ; ex_mem:S_EX_MEM|RT_Data_MEM_reg[3], ex_mem:S_EX_MEM|regis16:R_RTData|R[3],          ;
+;                                     ;                           ; ex_mem:S_EX_MEM|RT_Data_MEM_reg[4], ex_mem:S_EX_MEM|regis16:R_RTData|R[4],          ;
+;                                     ;                           ; ex_mem:S_EX_MEM|RT_Data_MEM_reg[5], ex_mem:S_EX_MEM|regis16:R_RTData|R[5],          ;
+;                                     ;                           ; ex_mem:S_EX_MEM|RT_Data_MEM_reg[6], ex_mem:S_EX_MEM|regis16:R_RTData|R[6],          ;
+;                                     ;                           ; ex_mem:S_EX_MEM|RT_Data_MEM_reg[7], ex_mem:S_EX_MEM|regis16:R_RTData|R[7],          ;
+;                                     ;                           ; ex_mem:S_EX_MEM|RT_Data_MEM_reg[8], ex_mem:S_EX_MEM|regis16:R_RTData|R[8],          ;
+;                                     ;                           ; data_memory:Data_Mem|read_reg[7], data_memory:Data_Mem|read_reg[6],                 ;
+;                                     ;                           ; data_memory:Data_Mem|read_reg[5], mem_wb:S_MEM_WB|regis16:R_ReadData|R[7],          ;
+;                                     ;                           ; mem_wb:S_MEM_WB|regis16:R_ReadData|R[6], mem_wb:S_MEM_WB|regis16:R_ReadData|R[5],   ;
+;                                     ;                           ; mem_wb:S_MEM_WB|Read_Data_WB_reg[7], mem_wb:S_MEM_WB|Read_Data_WB_reg[6],           ;
+;                                     ;                           ; mem_wb:S_MEM_WB|Read_Data_WB_reg[5]                                                 ;
+; id_ex:S_ID_EX|regis16:R_Off|R[13]   ; Stuck at GND              ; id_ex:S_ID_EX|Offset_EX_reg[13], id_ex:S_ID_EX|PC_2_EX_reg[15],                     ;
+;                                     ; due to stuck port data_in ; id_ex:S_ID_EX|regis16:R_PC|R[15], if_id:S_IF_ID|PC_2_ID_reg[15],                    ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[15], id_ex:S_ID_EX|PC_2_EX_reg[14],               ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_PC|R[14], if_id:S_IF_ID|PC_2_ID_reg[14],                    ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[14], id_ex:S_ID_EX|PC_2_EX_reg[13],               ;
+;                                     ;                           ; id_ex:S_ID_EX|regis16:R_PC|R[13], if_id:S_IF_ID|PC_2_ID_reg[13],                    ;
+;                                     ;                           ; if_id:S_IF_ID|regis16:R_PC_2_IF|R[13]                                               ;
+; data_memory:Data_Mem|read_reg[11]   ; Stuck at GND              ; mem_wb:S_MEM_WB|regis16:R_ReadData|R[11], mem_wb:S_MEM_WB|Read_Data_WB_reg[11]      ;
+;                                     ; due to stuck port data_in ;                                                                                     ;
+; data_memory:Data_Mem|read_reg[10]   ; Stuck at GND              ; mem_wb:S_MEM_WB|regis16:R_ReadData|R[10], mem_wb:S_MEM_WB|Read_Data_WB_reg[10]      ;
+;                                     ; due to stuck port data_in ;                                                                                     ;
+; data_memory:Data_Mem|read_reg[9]    ; Stuck at GND              ; mem_wb:S_MEM_WB|regis16:R_ReadData|R[9], mem_wb:S_MEM_WB|Read_Data_WB_reg[9]        ;
+;                                     ; due to stuck port data_in ;                                                                                     ;
+; data_memory:Data_Mem|read_reg[8]    ; Stuck at GND              ; mem_wb:S_MEM_WB|regis16:R_ReadData|R[8], mem_wb:S_MEM_WB|Read_Data_WB_reg[8]        ;
+;                                     ; due to stuck port data_in ;                                                                                     ;
+; data_memory:Data_Mem|read_reg[15]   ; Stuck at GND              ; mem_wb:S_MEM_WB|regis16:R_ReadData|R[15], mem_wb:S_MEM_WB|Read_Data_WB_reg[15]      ;
+;                                     ; due to stuck port data_in ;                                                                                     ;
+; data_memory:Data_Mem|read_reg[14]   ; Stuck at GND              ; mem_wb:S_MEM_WB|regis16:R_ReadData|R[14], mem_wb:S_MEM_WB|Read_Data_WB_reg[14]      ;
+;                                     ; due to stuck port data_in ;                                                                                     ;
+; data_memory:Data_Mem|read_reg[13]   ; Stuck at GND              ; mem_wb:S_MEM_WB|regis16:R_ReadData|R[13], mem_wb:S_MEM_WB|Read_Data_WB_reg[13]      ;
+;                                     ; due to stuck port data_in ;                                                                                     ;
+; data_memory:Data_Mem|read_reg[12]   ; Stuck at GND              ; mem_wb:S_MEM_WB|regis16:R_ReadData|R[12], mem_wb:S_MEM_WB|Read_Data_WB_reg[12]      ;
+;                                     ; due to stuck port data_in ;                                                                                     ;
+; id_ex:S_ID_EX|regis16:R_Off|R[14]   ; Stuck at GND              ; id_ex:S_ID_EX|Offset_EX_reg[14]                                                     ;
+;                                     ; due to stuck port data_in ;                                                                                     ;
+; id_ex:S_ID_EX|regis16:R_Off|R[15]   ; Stuck at GND              ; id_ex:S_ID_EX|Offset_EX_reg[15]                                                     ;
+;                                     ; due to stuck port data_in ;                                                                                     ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[9]  ; Lost Fanouts              ; ex_mem:S_EX_MEM|regis16:R_RTData|R[9]                                               ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[10] ; Lost Fanouts              ; ex_mem:S_EX_MEM|regis16:R_RTData|R[10]                                              ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[11] ; Lost Fanouts              ; ex_mem:S_EX_MEM|regis16:R_RTData|R[11]                                              ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[12] ; Lost Fanouts              ; ex_mem:S_EX_MEM|regis16:R_RTData|R[12]                                              ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[13] ; Lost Fanouts              ; ex_mem:S_EX_MEM|regis16:R_RTData|R[13]                                              ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[14] ; Lost Fanouts              ; ex_mem:S_EX_MEM|regis16:R_RTData|R[14]                                              ;
+; ex_mem:S_EX_MEM|RT_Data_MEM_reg[15] ; Lost Fanouts              ; ex_mem:S_EX_MEM|regis16:R_RTData|R[15]                                              ;
++-------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 359   ;
+; Number of registers using Synchronous Clear  ; 13    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 336   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |pipeline_cpu|id_ex:S_ID_EX|regis16:R_RS|R[14] ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 96 LEs               ; 64 LEs                 ; No         ; |pipeline_cpu|registers:S_Registers|Mux45      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mem_wb:S_MEM_WB|regis4:R_WB_in"                                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; data[3..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r[3..2]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ex_mem:S_EX_MEM|regis4:R_Zero"                                                            ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; data[3..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r[3..1]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ex_mem:S_EX_MEM|regis4:R_M_in"                                                            ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; data[3..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r[3]       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ex_mem:S_EX_MEM|regis4:R_WB_in"                                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; data[3..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r[3..2]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -223,31 +879,34 @@ https://fpgasoftware.intel.com/eula.
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "id_ex:S_ID_EX|regis4:R_EX_in" ;
-+---------+-------+----------+-----------------------------+
-; Port    ; Type  ; Severity ; Details                     ;
-+---------+-------+----------+-----------------------------+
-; data[3] ; Input ; Info     ; Stuck at GND                ;
-+---------+-------+----------+-----------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "id_ex:S_ID_EX|regis4:R_EX_in"                                                          ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; data[3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r[3]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------+
-; Port Connectivity Checks: "id_ex:S_ID_EX|regis4:R_M_in" ;
-+---------+-------+----------+----------------------------+
-; Port    ; Type  ; Severity ; Details                    ;
-+---------+-------+----------+----------------------------+
-; data[3] ; Input ; Info     ; Stuck at GND               ;
-+---------+-------+----------+----------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "id_ex:S_ID_EX|regis4:R_M_in"                                                           ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; data[3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r[3..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------+
-; Port Connectivity Checks: "id_ex:S_ID_EX|regis4:R_WB_in" ;
-+------------+-------+----------+--------------------------+
-; Port       ; Type  ; Severity ; Details                  ;
-+------------+-------+----------+--------------------------+
-; data[3..2] ; Input ; Info     ; Stuck at GND             ;
-+------------+-------+----------+--------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "id_ex:S_ID_EX|regis4:R_WB_in"                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; data[3..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r[3..2]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -273,14 +932,48 @@ https://fpgasoftware.intel.com/eula.
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 40                          ;
+; cycloneiii_ff         ; 359                         ;
+;     ENA               ; 336                         ;
+;     SCLR              ; 13                          ;
+;     plain             ; 10                          ;
+; cycloneiii_lcell_comb ; 352                         ;
+;     arith             ; 22                          ;
+;         2 data inputs ; 22                          ;
+;     normal            ; 330                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 33                          ;
+;         3 data inputs ; 39                          ;
+;         4 data inputs ; 248                         ;
+;                       ;                             ;
+; Max LUT depth         ; 16.00                       ;
+; Average LUT depth     ; 3.65                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Nov 29 19:15:46 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipeline_cpu -c pipeline_cpu --analysis_and_elaboration
+    Info: Processing started: Mon Dec 01 14:40:52 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipeline_cpu -c pipeline_cpu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file pipeline_cpu.vhd
@@ -322,7 +1015,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file ex_mem.
     Info (12022): Found design unit 1: ex_mem-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd Line: 29
     Info (12023): Found entity 1: ex_mem File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/ex_mem.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file data_memory.vhd
-    Info (12022): Found design unit 1: data_memory-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 16
+    Info (12022): Found design unit 1: data_memory-rtl File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 17
     Info (12023): Found entity 1: data_memory File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file mem_wb.vhd
     Info (12022): Found design unit 1: mem_wb-structure File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/mem_wb.vhd Line: 22
@@ -350,7 +1043,7 @@ Warning (10036): Verilog HDL or VHDL warning at pipeline_cpu.vhd(84): object "LI
 Warning (10036): Verilog HDL or VHDL warning at pipeline_cpu.vhd(93): object "overflow_EX" assigned a value but never read File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 93
 Info (12128): Elaborating entity "mux_2_1_16b" for hierarchy "mux_2_1_16b:Mux_2_1_IF" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 183
 Info (12128): Elaborating entity "pc" for hierarchy "pc:PC_IF" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 184
-Info (12128): Elaborating entity "regis16" for hierarchy "pc:PC_IF|regis16:R_PC_in" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd Line: 29
+Info (12128): Elaborating entity "regis16" for hierarchy "pc:PC_IF|regis16:R_PC_in" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pc.vhd Line: 30
 Info (12128): Elaborating entity "alu_16b" for hierarchy "alu_16b:PC_mais_2" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 186
 Info (12128): Elaborating entity "inst_mem" for hierarchy "inst_mem:Instruc_M" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 188
 Warning (10540): VHDL Signal Declaration warning at inst_mem.vhd(14): used explicit default value for signal "instructions" because signal was never assigned a value File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/inst_mem.vhd Line: 14
@@ -358,548 +1051,28 @@ Info (12128): Elaborating entity "if_id" for hierarchy "if_id:S_IF_ID" File: C:/
 Info (12128): Elaborating entity "control" for hierarchy "control:S_Control" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 208
 Info (12128): Elaborating entity "registers" for hierarchy "registers:S_Registers" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 210
 Info (12128): Elaborating entity "id_ex" for hierarchy "id_ex:S_ID_EX" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 221
-Info (12128): Elaborating entity "regis4" for hierarchy "id_ex:S_ID_EX|regis4:R_WB_in" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 74
-Info (12128): Elaborating entity "mux_2_1_4b" for hierarchy "id_ex:S_ID_EX|mux_2_1_4b:M_WB_out" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 75
+Info (12128): Elaborating entity "regis4" for hierarchy "id_ex:S_ID_EX|regis4:R_WB_in" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/id_ex.vhd Line: 70
 Info (12128): Elaborating entity "shiftl_1" for hierarchy "shiftl_1:S_Sll_1" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 233
 Info (12128): Elaborating entity "alu_control" for hierarchy "alu_control:ALUControl" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 237
+Info (12128): Elaborating entity "mux_2_1_4b" for hierarchy "mux_2_1_4b:Mux_2_1_EX_2" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 240
 Info (12128): Elaborating entity "ex_mem" for hierarchy "ex_mem:S_EX_MEM" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 248
 Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:Data_Mem" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 262
-Warning (10631): VHDL Process Statement warning at data_memory.vhd(23): inferring latch(es) for signal or variable "Read_Data", which holds its previous value in one or more paths through the process File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Warning (10631): VHDL Process Statement warning at data_memory.vhd(23): inferring latch(es) for signal or variable "mem", which holds its previous value in one or more paths through the process File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[0]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[1]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[2]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[3]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[4]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[5]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[6]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[7]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[8]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[9]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[10]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[11]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[12]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[13]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[14]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[15]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[16]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[17]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[18]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[19]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[20]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[21]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[22]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[23]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[24]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[25]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[26]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[27]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[28]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[29]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[30]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[31]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[32]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[33]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[34]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[35]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[36]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[37]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[38]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[39]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[40]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[41]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[42]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[43]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[44]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[45]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[46]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[47]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[48]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[49]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[50]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[51]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[52]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[53]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[54]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[55]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[56]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[57]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[58]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[59]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[60]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[61]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[62]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[63]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[64]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[65]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[66]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[67]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[68]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[69]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[70]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[71]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[72]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[73]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[74]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[75]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[76]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[77]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[78]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[79]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[80]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[81]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[82]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[83]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[84]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[85]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[86]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[87]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[88]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[89]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[90]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[91]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[92]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[93]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[94]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[95]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[96]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[97]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[98]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[99]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[100]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[101]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[102]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[103]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[104]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[105]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[106]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[107]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[108]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[109]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[110]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[111]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[112]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[113]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[114]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[115]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[116]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[117]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[118]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[119]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[120]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[121]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[122]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[123]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[124]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[125]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[126]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[127]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[128]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[129]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[130]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[131]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[132]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[133]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[134]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[135]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[136]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[137]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[138]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[139]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[140]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[141]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[142]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[143]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[144]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[145]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[146]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[147]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[148]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[149]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[150]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[151]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[152]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[153]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[154]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[155]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[156]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[157]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[158]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[159]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[160]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[161]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[162]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[163]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[164]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[165]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[166]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[167]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[168]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[169]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[170]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[171]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[172]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[173]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[174]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[175]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[176]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[177]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[178]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[179]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[180]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[181]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[182]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[183]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[184]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[185]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[186]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[187]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[188]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[189]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[190]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[191]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[192]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[193]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[194]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[195]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[196]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[197]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[198]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[199]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[200]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[201]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[202]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[203]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[204]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[205]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[206]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[207]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[208]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[209]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[210]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[211]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[212]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[213]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[214]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[215]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[216]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[217]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[218]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[219]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[220]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[221]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[222]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[223]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[224]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[225]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[226]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[227]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[228]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[229]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[230]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[231]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[232]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[233]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[234]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[235]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[236]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[237]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[238]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[239]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[240]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[241]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[242]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[243]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[244]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[245]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[246]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[247]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[248]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[249]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[250]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[251]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[252]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[253]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[254]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[255]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[256]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[257]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[258]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[259]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[260]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[261]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[262]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[263]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[264]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[265]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[266]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[267]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[268]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[269]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[270]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[271]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[272]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[273]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[274]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[275]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[276]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[277]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[278]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[279]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[280]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[281]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[282]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[283]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[284]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[285]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[286]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[287]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[288]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[289]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[290]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[291]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[292]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[293]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[294]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[295]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[296]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[297]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[298]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[299]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[300]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[301]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[302]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[303]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[304]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[305]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[306]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[307]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[308]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[309]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[310]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[311]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[312]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[313]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[314]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[315]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[316]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[317]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[318]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[319]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[320]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[321]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[322]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[323]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[324]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[325]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[326]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[327]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[328]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[329]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[330]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[331]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[332]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[333]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[334]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[335]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[336]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[337]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[338]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[339]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[340]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[341]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[342]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[343]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[344]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[345]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[346]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[347]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[348]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[349]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[350]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[351]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[352]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[353]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[354]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[355]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[356]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[357]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[358]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[359]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[360]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[361]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[362]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[363]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[364]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[365]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[366]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[367]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[368]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[369]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[370]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[371]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[372]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[373]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[374]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[375]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[376]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[377]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[378]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[379]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[380]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[381]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[382]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[383]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[384]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[385]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[386]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[387]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[388]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[389]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[390]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[391]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[392]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[393]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[394]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[395]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[396]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[397]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[398]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[399]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[400]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[401]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[402]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[403]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[404]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[405]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[406]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[407]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[408]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[409]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[410]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[411]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[412]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[413]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[414]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[415]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[416]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[417]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[418]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[419]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[420]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[421]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[422]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[423]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[424]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[425]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[426]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[427]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[428]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[429]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[430]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[431]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[432]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[433]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[434]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[435]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[436]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[437]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[438]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[439]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[440]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[441]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[442]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[443]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[444]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[445]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[446]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[447]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[448]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[449]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[450]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[451]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[452]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[453]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[454]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[455]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[456]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[457]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[458]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[459]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[460]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[461]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[462]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[463]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[464]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[465]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[466]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[467]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[468]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[469]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[470]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[471]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[472]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[473]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[474]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[475]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[476]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[477]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[478]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[479]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[480]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[481]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[482]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[483]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[484]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[485]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[486]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[487]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[488]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[489]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[490]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[491]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[492]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[493]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[494]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[495]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[496]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[497]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[498]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[499]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[500]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[501]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[502]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[503]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[504]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[505]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[506]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[507]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[508]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[509]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[510]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "mem[511]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[0]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[1]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[2]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[3]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[4]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[5]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[6]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[7]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[8]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[9]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[10]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[11]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[12]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[13]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[14]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
-Info (10041): Inferred latch for "Read_Data[15]" at data_memory.vhd(23) File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 23
 Info (12128): Elaborating entity "mem_wb" for hierarchy "mem_wb:S_MEM_WB" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 270
 Info (12128): Elaborating entity "multplex_led_hex" for hierarchy "multplex_led_hex:Led_Reg_n" File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/pipeline_cpu.vhd Line: 289
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4792 megabytes
-    Info: Processing ended: Sat Nov 29 19:15:52 2025
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:12
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "data_memory:Data_Mem|mem" is uninferred due to inappropriate RAM size File: C:/quartus directory/proj2_cpu_pipeline_s2_25/cpu-pipeline-vhdl/data_memory.vhd Line: 22
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 130 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 668 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 35 output pins
+    Info (21061): Implemented 628 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Mon Dec 01 14:40:59 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:15
 
 

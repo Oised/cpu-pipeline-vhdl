@@ -166,6 +166,7 @@ end component;
 -- Data Memory (endereços e dados 16 bits)
 component data_memory
   port (
+    clk			: in	std_logic;
     Address    : in  std_logic_vector(15 downto 0);
     Write_Data : in  std_logic_vector(15 downto 0);
     MemRead    : in  std_logic;

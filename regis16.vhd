@@ -6,7 +6,7 @@ entity regis16 is
         Data  : in  std_logic_vector(15 downto 0);
         Clock : in  std_logic;
         Rin   : in  std_logic;
-        R     : out std_logic_vector(15 downto 0)
+        R     : out std_logic_vector(15 downto 0) := (others => '0')
     );
 end regis16;
 

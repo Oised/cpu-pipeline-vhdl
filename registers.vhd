@@ -7,8 +7,8 @@ entity registers is
         RS_addr   : in  std_logic_vector(3 downto 0);
         RT_addr   : in  std_logic_vector(3 downto 0);
         RW_addr   : in  std_logic_vector(3 downto 0);
+		  clock     : in  std_logic;
         WriteData : in  std_logic_vector(15 downto 0);
-        clock           : in  std_logic;
         RegWrite  : in  std_logic;
         RS_Data   : out std_logic_vector(15 downto 0);
         RT_Data   : out std_logic_vector(15 downto 0);
